@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import c0 from '../public/connie/Connie0.png'
@@ -6,6 +7,13 @@ import StatusBar from '@/components/statusBar'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const router = useRouter();
+  // const data = router.query;
+  // console.log(data);
+  const handleClick = () => {
+    router.push('/connie011');
+  };
+
   return (
     <main
       className=""
@@ -20,7 +28,7 @@ export default function Home() {
       <h3>answer header</h3>
       <input type="text" placeholder="type here"/> */}
 
-      <StatusBar fraction='1/4'/>
+      <StatusBar fraction='0/4'/>
 
       <div className='flex flex-col w-full'>
         <p>
@@ -30,14 +38,17 @@ export default function Home() {
         </p>
       </div>
 
-      <Image
-        src={c0}
-        alt="Connie0"
-        className="object-fill"
-      />
+      <div className='h-min w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
+      {/* <div className='h-min w-[40%]'> */}
+        <Image
+          src={c0}
+          alt="Connie0"
+          className="object-contain"
+        />
+      </div>
 
-      <div className='flex flex-col w-full'>
-        <button className='btn-blue'>Hi Connie!</button>
+      <div className='flex flex-col w-full justify-center items-center'>
+        <button className='btn-blue' onClick={handleClick}>Hi Connie!</button>
         <button className='btn-transparent'>Maybe Later</button>
       </div>
 

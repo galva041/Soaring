@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 const StatusBar = ({fraction}) => {
     
     return (
-        <header className="flex w-full justify-between items-center">
+        <header className="flex w-full justify-between items-center mb-2">
             <IoClose size={32}/>
 
             <h4 className="px-3">{fraction}</h4>

@@ -4,7 +4,7 @@
 
 @layer base {
   main {
-    @apply bg-white font-poppins w-screen h-screen flex flex-col justify-evenly items-center px-6 pt-6
+    @apply bg-white font-poppins w-screen h-screen flex flex-col justify-evenly items-center px-6 py-6
   }
 
   p {
@@ -34,21 +34,21 @@
   }
 
   input {
-    @apply text-txt-gray text-[14px] border-2 border-outline-gray w-1/4 h-16 px-1.5 rounded-md
+    @apply text-txt-gray text-[14px] border-2 border-outline-gray w-full h-min px-1.5 rounded-md
   }
 }
 
 @layer components {
   .btn-transparent {
-    @apply text-blue text-[16px] font-semibold py-1.5
+    @apply text-blue text-[16px] font-semibold py-1.5 w-fit
   }
 
   .btn-blue {
-    @apply text-white text-[16px] font-semibold bg-blue py-1.5 rounded-full
+    @apply text-white text-[16px] font-semibold bg-blue py-1.5 rounded-full w-full
   }
 
   .btn-gray {
-    @apply text-black text-[16px] font-semibold border-2 border-outline-gray py-1.5 rounded-full
+    @apply text-black text-[16px] font-semibold border-2 border-outline-gray py-1.5 rounded-full w-full
   }
 
   .badge-desc {

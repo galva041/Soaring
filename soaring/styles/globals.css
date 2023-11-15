@@ -4,7 +4,7 @@
 
 @layer base {
   main {
-    @apply bg-white font-poppins w-screen h-screen flex flex-col justify-evenly items-center px-6 py-6
+    @apply bg-white font-poppins w-screen h-screen flex flex-col justify-between items-center px-6 pt-[20px] pb-[32px]
   }
 
   p {
@@ -34,7 +34,19 @@
   }
 
   input {
-    @apply text-txt-gray text-[14px] border-2 border-outline-gray w-full h-min px-1.5 rounded-md
+    @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md
+  }
+
+  input:placeholder-shown {
+    @apply italic text-txt-gray
+  }
+  
+  textarea {
+    @apply text-black text-[14px] border-2 border-outline-gray w-full h-20 p-3 rounded-md
+  }
+
+  textarea:placeholder-shown {
+    @apply italic text-txt-gray
   }
 }
 
@@ -44,7 +56,7 @@
   }
 
   .btn-blue {
-    @apply text-white text-[16px] font-semibold bg-blue py-1.5 rounded-full w-full
+    @apply text-white text-[16px] font-semibold bg-blue py-3 rounded-full w-full
   }
 
   .btn-gray {
@@ -53,6 +65,10 @@
 
   .badge-desc {
     @apply text-txt-gray
+  }
+
+  .define {
+    @apply text-blue underline
   }
 }
 

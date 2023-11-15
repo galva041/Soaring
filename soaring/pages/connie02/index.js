@@ -2,21 +2,17 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'
 import c02 from '../../public/connie/Connie02.png'
 import StatusBar from '@/components/statusBar'
+import TxtAnsPopUp from '@/components/txtAnsPopUp';
 
 
 export default function Connie011() {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push('/connie01');
-  };
 
   return (
     <main
       className=""
     >
 
-      <StatusBar fraction='2/4'/>
+      <StatusBar fraction='2/4' finish="0"/>
 
       <div className='flex flex-col w-full'>
         <p>
@@ -33,13 +29,15 @@ export default function Connie011() {
         />
       </div>
 
-      <input type="text" 
+      {/* <input type="text" rows="4" cols="50" 
       placeholder="For example, Connie can say “I’m intelligent.” Now you try! Tap here to type."
-      />
+      /> */}
 
-      <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue'>Check</button>
-      </div>
+      <textarea rows="4" cols="50" type="text" 
+      placeholder="For example, Connie can say “I’m intelligent.” Now you try! Tap here to type."> 
+      </textarea>
+
+      <TxtAnsPopUp currPage="Connie02"/>
 
     </main>
   )

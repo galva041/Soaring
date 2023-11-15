@@ -17,7 +17,7 @@ export default function Connie011() {
       className=""
     >
 
-      <StatusBar fraction='0/4'/>
+      <StatusBar fraction='0/4' finish="0"/>
 
       <div className='flex flex-col w-full'>
         <p>
@@ -26,7 +26,6 @@ export default function Connie011() {
       </div>
 
       <div className='h-min w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
-      {/* <div className='h-min w-[40%]'> */}
         <Image
           src={c00}
           alt="Connie00"
@@ -35,7 +34,7 @@ export default function Connie011() {
       </div>
 
       <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue' onClick={handleClick}>Yes, I'll help!</button>
+        <button className='btn-blue mb-3' onClick={handleClick}>Yes, I'll help!</button>
         <button className='btn-transparent'>Maybe Later</button>
       </div>
 

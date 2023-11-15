@@ -8,8 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const router = useRouter();
-  // const data = router.query;
-  // console.log(data);
+
   const handleClick = () => {
     router.push('/connie011');
   };
@@ -28,18 +27,18 @@ export default function Home() {
       <h3>answer header</h3>
       <input type="text" placeholder="type here"/> */}
 
-      <StatusBar fraction='0/4'/>
+      <StatusBar fraction='0/4' finish="0"/>
 
       <div className='flex flex-col w-full'>
         <p>
           Meet Connie - Connie is doing her daily affirmations. <br/><br/>
         
-          Affirmations are positive statements you tell yourself to remind yourself of all the amazing things about you.
+          <span className='define'>Affirmations</span> 
+          &nbsp; are positive statements you tell yourself to remind yourself of all the amazing things about you.
         </p>
       </div>
 
-      <div className='h-min w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
-      {/* <div className='h-min w-[40%]'> */}
+      <div className='h-min w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
         <Image
           src={c0}
           alt="Connie0"
@@ -48,7 +47,7 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue' onClick={handleClick}>Hi Connie!</button>
+        <button className='btn-blue mb-3' onClick={handleClick}>Hi Connie!</button>
         <button className='btn-transparent'>Maybe Later</button>
       </div>
 

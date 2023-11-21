@@ -34,7 +34,8 @@ export default function Connie011() {
       /> */}
 
       <textarea rows="4" cols="50" type="text" 
-      placeholder="For example, Connie can say “I’m intelligent.” Now you try! Tap here to type."> 
+        placeholder="For example, Connie can say “I’m intelligent.” Now you try! Tap here to type."
+        className="mt-3 mb-10">
       </textarea>
 
       <TxtAnsPopUp currPage="Connie02"/>

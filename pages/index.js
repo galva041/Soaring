@@ -30,9 +30,11 @@ export default function Home() {
       <StatusBar fraction='0/4' finish="0"/>
 
       <div className='flex flex-col w-full'>
-        <p className='text-[22px] sm:text-[24px]'>
-          Meet Connie - Connie is doing her daily affirmations. <br/><br/>
+        <p className='text-[22px] sm:text-[24px] mb-4'>
+          Meet Connie - Connie is doing her daily affirmations.
+        </p>
         
+        <p className='text-[22px] sm:text-[24px]'>
           <span className='define'>Affirmations</span> 
           &nbsp; are positive statements you tell yourself to remind yourself of all the amazing things about you.
         </p>
@@ -47,8 +49,8 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue mt-5 my-3' onClick={handleClick}>Hi Connie!</button>
-        <button className='btn-transparent'>Maybe Later</button>
+        <button className='btn-blue mt-7 my-3' onClick={handleClick}>Hi Connie!</button>
+        <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
       </div>
 
     </main>

@@ -18,7 +18,7 @@ export default function Connie03() {
             </p>
         </div>
 
-        <div className='h-min w-[90%] sm:w-[70%] md:w-[60%] lg:w-[40%] xl:w-[35%]'>
+        <div className='pt-4 pb-7 h-min w-[90%] sm:w-[70%] md:w-[60%] lg:w-[40%] xl:w-[35%]'>
         {/* <div className='h-min w-[40%]'> */}
             <Image
             src={c03}

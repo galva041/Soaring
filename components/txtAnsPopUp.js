@@ -28,18 +28,18 @@ const TxtAnsPopUp = ({currPage}) => {
     
     return (
         <div className="w-screen px-6 ">
-            <div className='grid grid-flow-row gap-3 w-full mb-4 z-0 relative'>
+            <div className='grid grid-flow-row gap-3 w-full mt-1.5 z-0 relative'>
                 <button className='btn-blue' onClick={handlePopUp}>Check</button>
             </div>
 
         {affAns? 
-                        <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-                        <div className="flex flex-col justify-around items-start w-full h-2/5 rounded-t-3xl bg-white p-8">
+            <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
+                <div className="flex flex-col justify-around items-start w-full h-1/4 rounded-t-3xl bg-white p-8">
                     <h3>
                         ✅ &nbsp;&nbsp; Great job! 
                     </h3>
 
-                    <h2>
+                    <h2 className="mb-3">
                         That was a good affirmation!
                     </h2>
 
@@ -49,12 +49,12 @@ const TxtAnsPopUp = ({currPage}) => {
 
         : fourAns? 
         <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-        <div className="flex flex-col justify-around items-start w-full h-2/5 rounded-t-3xl bg-white p-8">
+        <div className="flex flex-col justify-around items-start w-full h-1/4 rounded-t-3xl bg-white p-8">
                     <h3>
                         ✅ &nbsp;&nbsp; Fantastic Job!
                     </h3>
 
-                    <h2>
+                    <h2 className="mb-3">
                         Those are great affirmations!
                     </h2>
 

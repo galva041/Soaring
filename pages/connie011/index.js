@@ -25,7 +25,7 @@ export default function Connie011() {
         </p>
       </div>
 
-      <div className='h-min w-[78%] sm:w-[65%] md:w-[50%] lg:w-[35%] xl:w-[30%]'>
+      <div className='mt-9 mb-8 h-min w-[78%] sm:w-[65%] md:w-[50%] lg:w-[35%] xl:w-[25%]'>
         <Image
           src={c00}
           alt="Connie00"
@@ -35,7 +35,7 @@ export default function Connie011() {
 
       <div className='flex flex-col w-full justify-center items-center'>
         <button className='btn-blue mb-3' onClick={handleClick}>Yes, I'll help!</button>
-        <button className='btn-transparent'>Maybe Later</button>
+        <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
       </div>
 
     </main>

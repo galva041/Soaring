@@ -30,7 +30,7 @@ export default function Home() {
       <StatusBar fraction='0/4' finish="0"/>
 
       <div className='flex flex-col w-full'>
-        <p>
+        <p className='text-[22px] sm:text-[24px]'>
           Meet Connie - Connie is doing her daily affirmations. <br/><br/>
         
           <span className='define'>Affirmations</span> 
@@ -38,7 +38,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className='h-min w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
+      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[60%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'>
         <Image
           src={c0}
           alt="Connie0"
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue mb-3' onClick={handleClick}>Hi Connie!</button>
+        <button className='btn-blue mt-5 my-3' onClick={handleClick}>Hi Connie!</button>
         <button className='btn-transparent'>Maybe Later</button>
       </div>
 

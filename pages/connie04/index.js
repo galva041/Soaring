@@ -15,12 +15,12 @@ export default function Connie04() {
       <StatusBar fraction='4/4' finish="0"/>
 
       <div className='flex flex-col w-full'>
-        <p>
+        <p className='text-[22px]'>
             Thank you for helping Connie! Now, it’s your turn! What are three affirmations about yourself?
         </p>
       </div>
 
-      <div className='h-min w-3/4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
+      <div className='h-min w-[80%] sm:w-[70%] md:w-[55%] lg:w-[40%] xl:w-[35%]'>
       {/* <div className='h-min w-[40%]'> */}
         <Image
           src={c04}

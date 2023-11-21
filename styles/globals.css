@@ -4,7 +4,7 @@
 
 @layer base {
   main {
-    @apply bg-white font-poppins w-screen h-screen flex flex-col justify-between items-center px-6 pt-[20px] pb-[32px]
+    @apply bg-white font-poppins w-screen flex flex-col justify-start items-center px-6 pt-[2%]
   }
 
   p {
@@ -51,6 +51,10 @@
 }
 
 @layer components {
+  .btn-nav {
+    @apply flex justify-center items-center m-1 w-9 h-9 rounded-full bg-light-blue 
+  }
+
   .btn-transparent {
     @apply text-blue text-[16px] font-semibold py-1.5 w-fit
   }

@@ -12,6 +12,7 @@ module.exports = {
         'bar-gray': '#E0E0E0',
         'black': '#313131',
         'blue': '#0978D5',
+        'light-blue': '#CAE7FC',
         'outline-gray': '#ADADAD',
         'txt-gray': '#777777',
       },

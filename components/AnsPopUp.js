@@ -36,8 +36,8 @@ const AnsPopUp = ({currPage}) => {
             }
 
         {incAns? 
-            <div className="h-screen w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-                <div className="flex flex-col justify-around items-start w-full h-1/3 rounded-t-3xl bg-white p-8 pb-[54px]">
+            <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
+            <div className="flex flex-col justify-around items-start w-full h-2/5 rounded-t-3xl bg-white p-8">
                     <h3>
                         🤔 &nbsp;&nbsp;Hm... that’s not quite right.
                     </h3>
@@ -51,8 +51,8 @@ const AnsPopUp = ({currPage}) => {
             </div>
 
         : corAns? 
-            <div className="h-screen w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-                <div className="flex flex-col justify-around items-start w-full h-1/3 rounded-t-3xl bg-white p-8 pb-[54px]">
+            <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
+                <div className="flex flex-col justify-around items-start w-full h-2/5 rounded-t-3xl bg-white p-8">
                     <h3>
                         ✅ &nbsp;&nbsp;That’s a great affirmation! 
                     </h3>

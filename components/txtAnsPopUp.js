@@ -33,8 +33,8 @@ const TxtAnsPopUp = ({currPage}) => {
             </div>
 
         {affAns? 
-            <div className="h-screen w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-                <div className="flex flex-col justify-around items-start w-full h-1/4 rounded-t-3xl bg-white p-5 pb-8">
+                        <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
+                        <div className="flex flex-col justify-around items-start w-full h-2/5 rounded-t-3xl bg-white p-8">
                     <h3>
                         ✅ &nbsp;&nbsp; Great job! 
                     </h3>
@@ -48,8 +48,8 @@ const TxtAnsPopUp = ({currPage}) => {
             </div>
 
         : fourAns? 
-            <div className="h-screen w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-                <div className="flex flex-col justify-around items-start w-full h-1/4 rounded-t-3xl bg-white p-5 pb-8">
+        <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
+        <div className="flex flex-col justify-around items-start w-full h-2/5 rounded-t-3xl bg-white p-8">
                     <h3>
                         ✅ &nbsp;&nbsp; Fantastic Job!
                     </h3>

@@ -1,10 +1,8 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import c0 from '../public/connie/Connie0.png'
-import StatusBar from '@/components/statusBar'
-import Definition from '@/components/definition';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
+import landing from '../public/connie/Landing.png';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,17 +10,12 @@ export default function Home() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/connie011');
-  };
-
-  var [def, setDef] = useState(false);
-  const handleDef = () => {
-    setDef(!def);
+    router.push('/instructions');
   };
 
   return (
     <main
-      className=""
+      className="bg-gray-blue h-screen"
     >
       {/* <p>text at the top</p>
       <button className='btn-blue'>button</button>
@@ -34,42 +27,21 @@ export default function Home() {
       <h3>answer header</h3>
       <input type="text" placeholder="type here"/> */}
 
-      <StatusBar fraction='0/4' finish="0"/>
+    <div className='h-min w-[73%] sm:w-[50%] md:w-[40%] lg:w-[30%] xl:w-[26%] my-[9%] sm:my-[10%] md:my-3 lg:my-6'>
+      <Image
+        src={landing}
+        alt="landing"
+        className="object-contain"
+      />
+    </div>
+      
+    <p className='font-poppins'>Welcome to</p>
+    <p className='text-[54px]'>Soaring</p>
+    <p className='text-center mb-[6%] lg:mb-10 md:w-2/3'>
+      Hi there, nice to meet you! We can’t wait for you to test our fun, new app! 😄 
+    </p>
 
-      { def && <Definition 
-        word="affirmation" 
-        type="noun" 
-        syllables="af·firm·a·tion"
-        pronounce="/ˌafərˈmāSHən/" 
-        def="a statement that is true"
-        /> }
-
-      <div className='flex flex-col w-full'>
-        <p className='text-[22px] sm:text-[24px] mb-4'
-        onClick={()=>setDef(false)}>
-          Meet Connie - Connie is doing her daily affirmations.
-        </p>
-        
-        <p className='text-[22px] sm:text-[24px]'>
-          <span className='btn-define' onClick={handleDef}>Affirmations</span>
-          &nbsp; are positive statements you tell yourself to remind yourself of all the amazing things about you.
-        </p>
-      </div>
-
-      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[60%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
-      onClick={()=>setDef(false)}>
-        <Image
-          src={c0}
-          alt="Connie0"
-          className="object-contain"
-        />
-      </div>
-
-      <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue mt-7 my-3' onClick={handleClick}>Hi Connie!</button>
-        <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
-      </div>
-
+    <button className='btn-blue mt-5 mb-[14%] lg:mb-10' onClick={handleClick}>Get Started</button>
     </main>
   )
 }

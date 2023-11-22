@@ -4,13 +4,13 @@
 
 @layer base {
   main {
-    @apply bg-white font-poppins w-screen flex flex-col justify-start items-center px-6 pt-3
+    @apply bg-white font-poppins w-screen flex flex-col justify-start items-center px-6 
   }
 
   p {
     /* 400-regular, 500-medium, 600-semibold */
     /* main text + badge name*/
-    @apply font-semibold text-[24px]
+    @apply font-semibold text-[24px] text-black
   }
 
   h1 {

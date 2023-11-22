@@ -34,7 +34,7 @@
   }
 
   input {
-    @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md
+    @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md mb-2
   }
 
   input:placeholder-shown {

@@ -13,8 +13,12 @@ module.exports = {
         'black': '#313131',
         'blue': '#0978D5',
         'light-blue': '#CAE7FC',
+        'dark-blue': '#06589A',
         'outline-gray': '#ADADAD',
         'txt-gray': '#777777',
+        'gray-blue': '#EBF3FA',
+        'yellow': '#FBAF00',
+        'pink': '#FFA3AF',
       },
       fontFamily: {
         "poppins": "var(--font-poppins)",

@@ -10,7 +10,7 @@ const StatusBar = ({fraction, finish}) => {
     var dynamicColor = { backgroundColor: '#E0E0E0',};
 
     if (fraction === "0/4") {
-        dynamicWidth = { width: '4%',}
+        dynamicWidth = { width: '10px',}
     } else if (fraction === "1/4") {
         dynamicWidth = { width: '25%',}
     } else if (fraction === "2/4") {
@@ -24,7 +24,7 @@ const StatusBar = ({fraction, finish}) => {
 
 
     return (
-        <header className="flex w-full h-7 sm:h-10 justify-between items-center mt-2 mb-7">
+        <header className="flex w-full h-7 sm:h-10 justify-between items-center mt-5 mb-7">
 
             <div className='flex'>
                 <button className="btn-nav" onClick={() => router.back()}>

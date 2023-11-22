@@ -71,8 +71,8 @@
     @apply text-txt-gray
   }
 
-  .define {
-    @apply text-blue underline
+  .btn-define {
+    @apply text-blue underline cursor-pointer
   }
 }
 

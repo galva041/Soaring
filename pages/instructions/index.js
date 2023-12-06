@@ -2,8 +2,9 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Image from 'next/image';
 import { IoChevronBackOutline } from "react-icons/io5";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-export default function Home() {
+export default function Instructions() {
   const router = useRouter();
 
   const handleClick = () => {
@@ -26,7 +27,7 @@ export default function Home() {
                     <p className='text-[32px]'>01</p>
                 </div>
 
-                <p className='w-2/3'>We will introduce you to our friend, Connie!</p>
+                <p className='w-2/3'>We will introduce you to our friend, Kono!</p>
             </div>
 
             <div className='flex justify-around mb-5'>
@@ -34,7 +35,7 @@ export default function Home() {
                     <p className='text-[32px]'>02</p>
                 </div>
 
-                <p className='w-2/3'>Help Connie achieve her goals using your skills.</p>
+                <p className='w-2/3'>Help Kono achieve their goals using your skills.</p>
             </div>
 
             <div className='flex justify-around'>
@@ -42,11 +43,12 @@ export default function Home() {
                     <p className='text-[32px]'>03</p>
                 </div>
 
-                <p className='w-2/3'>Have fun! We want to show you and Connie how amazing you both are!</p>
+                <p className='w-2/3'>Have fun! We want to show you and Kono how amazing you both are!</p>
             </div>
         </div>
         
-        <button className='btn-blue mt-5 md:mt-48' onClick={handleClick}>Let's Go!</button>
+        <button className='btn-blue mt-5 md:mt-48' onClick={handleClick}>Let's Go!
+        <HiOutlineArrowNarrowRight className='ml-2'/></button>
     </main>
   )
 }

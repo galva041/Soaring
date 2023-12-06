@@ -2,7 +2,8 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import landing from '../public/connie/Landing.png';
+import landing from '../public/kono/Landing.png';
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,7 +42,8 @@ export default function Home() {
       Hi there, nice to meet you! We can’t wait for you to test our fun, new app! 😄 
     </p>
 
-    <button className='btn-blue mt-5 mb-[14%] lg:mb-10' onClick={handleClick}>Get Started</button>
+    <button className='btn-blue mt-10 mb-[14%] lg:mb-10' onClick={handleClick}>Get Started 
+    <HiOutlineArrowNarrowRight className='ml-2'/></button>
     </main>
   )
 }

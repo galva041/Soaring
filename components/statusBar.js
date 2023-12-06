@@ -9,14 +9,16 @@ const StatusBar = ({fraction, finish}) => {
     var dynamicWidth = {};
     var dynamicColor = { backgroundColor: '#E0E0E0',};
 
-    if (fraction === "0/4") {
+    if (fraction === "0/5") {
         dynamicWidth = { width: '10px',}
-    } else if (fraction === "1/4") {
-        dynamicWidth = { width: '25%',}
-    } else if (fraction === "2/4") {
-        dynamicWidth = { width: '50%',}
-    } else if (fraction === "3/4") {
-        dynamicWidth = { width: '75%',}
+    } else if (fraction === "1/5") {
+        dynamicWidth = { width: '20%',}
+    } else if (fraction === "2/5") {
+        dynamicWidth = { width: '40%',}
+    } else if (fraction === "3/5") {
+        dynamicWidth = { width: '60%',}
+    } else if (fraction === "4/5") {
+        dynamicWidth = { width: '80%',}
     } else {
         dynamicWidth = { width: '100%',}
         dynamicColor = { backgroundColor: '#00C49A',}

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image'
-import c00 from '../../public/connie/Connie00.png'
+import c00 from '../../public/kono/Kono00.1.png'
 import StatusBar from '@/components/statusBar'
 
 
@@ -17,15 +17,15 @@ export default function Connie011() {
       className=""
     >
 
-      <StatusBar fraction='0/4' finish="0"/>
+      <StatusBar fraction='0/5' finish="0"/>
 
       <div className='flex flex-col w-full'>
         <p>
-          Sometimes Connie struggles to say the right things, can you help her?
+          Sometimes Kono struggles to say the right things, can you help them?
         </p>
       </div>
 
-      <div className='mt-9 mb-8 h-min w-[78%] sm:w-[65%] md:w-[50%] lg:w-[35%] xl:w-[25%]'>
+      <div className='mt-9 mb-8 h-min w-[82%] sm:w-[65%] md:w-[50%] lg:w-[35%] xl:w-[25%]'>
         <Image
           src={c00}
           alt="Connie00"

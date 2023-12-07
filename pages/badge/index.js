@@ -16,10 +16,10 @@ export default function Badge() {
     <main
       className=""
     >
-      <StatusBar fraction='4/4' finish="1"/>
+      <StatusBar fraction='5/5' finish="1"/>
 
     <div className='flex flex-col justify-between items-center mb-20'>
-        <div className='mt-5 h-min w-3/4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/4'>
+        <div className='mt-5 h-min w-3/4 sm:w-1/2 md:w-1/3 xl:w-1/4'>
         {/* <div className='h-min w-[40%]'> */}
             <Image
             src={badge}
@@ -28,7 +28,7 @@ export default function Badge() {
             />
         </div>
 
-        <div className='flex flex-col w-full text-center mb-7'>
+        <div className='flex flex-col w-full text-center mb-14'>
             <p>
                 Affirmation Badge
             </p>
@@ -40,7 +40,7 @@ export default function Badge() {
     </div>
 
     <div className='flex flex-col w-full justify-between items-center'>
-        <button className='btn-blue mb-3' onClick={handleClick}>Return to Home</button>
+        <button className='btn-blue' onClick={handleClick}>Return to Home</button>
     </div>
 
     </main>

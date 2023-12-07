@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Image from 'next/image'
-import c0 from '../../public/connie/Connie0.png'
+import c0 from '../../public/kono/Kono00.png'
 import StatusBar from '@/components/statusBar'
 import Definition from '@/components/definition';
 
@@ -30,7 +30,7 @@ export default function Connie00() {
       <h3>answer header</h3>
       <input type="text" placeholder="type here"/> */}
 
-      <StatusBar fraction='0/4' finish="0"/>
+      <StatusBar fraction='0/5' finish="0"/>
 
       { def && <Definition 
         word="affirmation" 
@@ -43,7 +43,7 @@ export default function Connie00() {
       <div className='flex flex-col w-full'>
         <p className='text-[22px] sm:text-[24px] mb-4'
         onClick={()=>setDef(false)}>
-          Meet Connie - Connie is doing her daily affirmations.
+          Meet Kono - Kono is doing their daily affirmations.
         </p>
         
         <p className='text-[22px] sm:text-[24px]'>
@@ -52,7 +52,7 @@ export default function Connie00() {
         </p>
       </div>
 
-      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[60%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
+      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[65%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
       onClick={()=>setDef(false)}>
         <Image
           src={c0}
@@ -62,7 +62,7 @@ export default function Connie00() {
       </div>
 
       <div className='flex flex-col w-full justify-center items-center'>
-        <button className='btn-blue mt-7 my-3' onClick={handleClick}>Hi Connie!</button>
+        <button className='btn-blue mt-7 my-3' onClick={handleClick}>Hi Kono!</button>
         <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
       </div>
 

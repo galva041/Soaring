@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from 'next/router';
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const AnsPopUp = ({currPage}) => {
     const router = useRouter();
@@ -67,7 +68,8 @@ const AnsPopUp = ({currPage}) => {
                         </h2>
                     }
 
-                    <button className="btn-blue" onClick={handleClick}>Next</button>
+                    <button className="btn-blue" onClick={handleClick}>Next
+                    <HiOutlineArrowNarrowRight className='ml-2'/></button>
                 </div>
             </div>
 

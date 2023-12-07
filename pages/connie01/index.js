@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import c01 from '../../public/connie/Connie01.png'
+import c01 from '../../public/kono/Kono01.png'
 import StatusBar from '@/components/statusBar'
 import AnsPopUp from '@/components/AnsPopUp';
 
@@ -10,11 +10,11 @@ export default function Connie01() {
     <main
       className="z-0"
     >   
-        <StatusBar fraction='1/4' finish="0"/>
+        <StatusBar fraction='1/5' finish="0"/>
 
         <div className='flex flex-col w-full'>
             <p>
-                What is a positive affirmation that Connie can say about herself?
+                What is a positive affirmation that Kono can say about themself?
             </p>
         </div>
 

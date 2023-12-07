@@ -33,13 +33,13 @@
     @apply font-semibold text-black text-[12px]
   }
 
-  input {
+  /* input {
     @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md mb-2
-  }
+  } */
 
-  input:placeholder-shown {
+  /* input:placeholder-shown {
     @apply italic text-txt-gray
-  }
+  } */
   
   textarea {
     @apply text-black text-[14px] border-2 border-outline-gray w-full h-20 p-3 rounded-md
@@ -47,6 +47,10 @@
 
   textarea:placeholder-shown {
     @apply italic text-txt-gray
+  }
+
+  label {
+    @apply text-black text-[18px] font-semibold
   }
 }
 
@@ -60,12 +64,24 @@
   }
 
   .btn-blue {
-    @apply text-white text-[16px] font-semibold bg-blue py-3 rounded-full w-full
+    @apply text-white text-[16px] font-semibold bg-blue py-3 rounded-full w-full flex justify-center items-center
+  }
+
+  .btn-blue:disabled {
+    @apply opacity-60
   }
 
   .btn-gray {
     @apply text-black text-[16px] font-semibold border-2 border-outline-gray py-1.5 rounded-full w-full
   }
+
+  /* .btn-gray:hover {
+    @apply text-blue border-blue
+  } */
+
+  /* .btn-gray:focus {
+    @apply text-blue border-blue
+  } */
 
   .badge-desc {
     @apply text-txt-gray

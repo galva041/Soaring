@@ -6,24 +6,30 @@ import StatusBar from '@/components/statusBar';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Affirmation from '@/components/affirmation';
 import HeartOption from '@/components/heartOption';
+import CorrectPopUp from '@/components/correctPopUp';
 
 
 export default function Connie04() {
-  const [checkedOptions, setCheckedOptions] = useState({});
-  const router = useRouter();
+  var [correct, setCorrect] = useState(false);
 
-  const isAtLeastOneChecked = Object.values(checkedOptions).some((isChecked) => isChecked);
+  var [options, setOptions] = useState([false, false, false, false, false, false]);
+  
+  const handleChange = (isChecked, id) => {
+    setOptions((prevOptions) => {
+      const newOptions = [...prevOptions];
+      newOptions[id] = isChecked;
+      return newOptions;
+    });
+
+    // console.log(options);
+  }
+
+  var isAtLeastOneChecked = !options.every(o => o === false);
 
   const handleClick = () => {
-    // if (isAtLeastOneChecked) {
-    //   console.log('At least one option is checked.');
-      // Navigate to the next page
-      router.push('/connie05'); // Replace '/nextPage' with the actual route
-    // } else {
-    //   console.log('Please select at least one option.');
-    //   // Display a message or take appropriate action if no option is checked
-    // }
+    setCorrect(true);
   };
+
   return (
     <main>
       <StatusBar fraction='4/5' finish="0"/>
@@ -43,19 +49,19 @@ export default function Connie04() {
       </div>
 
       {/* <form className="flex flex-col items-start md:items-center w-[99%]"> */}
-      <div className='my-1.5 flex flex-col items-start md:items-center w-[95%]'>
+      <div className='my-1.5 flex flex-col items-start w-[95%]'>
         <HeartOption id="op1" sentence={"I can make a difference."}
-        onChange={(checked) => setCheckedOptions(options => ({ ...options, "op1": checked }))}/>
+        onChange={(checked) => handleChange(checked, 0)}/>
         <HeartOption id="op2" sentence={"I have great ideas."}
-        onChange={(checked) => setCheckedOptions(options => ({ ...options, "op2": checked }))}/>
+        onChange={(checked) => handleChange(checked, 1)}/>
         <HeartOption id="op3" sentence={"I am proud of myself."}
-        onChange={(checked) => setCheckedOptions(options => ({ ...options, "op3": checked }))}/>
+        onChange={(checked) => handleChange(checked, 2)}/>
         <HeartOption id="op4" sentence={"I make others smile."}
-        onChange={(checked) => setCheckedOptions(options => ({ ...options, "op4": checked }))}/>
+        onChange={(checked) => handleChange(checked, 3)}/>
         <HeartOption id="op5" sentence={"My voice matters."}
-        onChange={(checked) => setCheckedOptions(options => ({ ...options, "op5": checked }))}/>
+        onChange={(checked) => handleChange(checked, 4)}/>
         <HeartOption id="op6" sentence={"I stand up for others."}
-        onChange={(checked) => setCheckedOptions(options => ({ ...options, "op6": checked }))}/>
+        onChange={(checked) => handleChange(checked, 5)}/>
       </div>
 
        
@@ -63,11 +69,15 @@ export default function Connie04() {
 
      <button className={`btn-blue col-span-2`}
       onClick={handleClick}
-      // disabled={!isAtLeastOneChecked}
+      disabled={!isAtLeastOneChecked}
       >
-          Check
-          <HiOutlineArrowNarrowRight className='ml-2'/>
+        Check
+        <HiOutlineArrowNarrowRight className='ml-2'/>
       </button>
+
+      {correct? 
+      <CorrectPopUp sentence="Those are great affirmations!" route="/connie05" />
+      : null}
 
     </main>
   )

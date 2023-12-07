@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { IoHeart } from "react-icons/io5";
 
-const HeartOption = ({id, sentence}) => {
+const HeartOption = ({id, sentence, onChange}) => {
   const [checked, setChecked] = useState(false);
 
-  const handleCheckboxChange = () => {
+  const handleCheckboxChange = (event) => {
     setChecked(!checked);
+    onChange(event.target.checked);
   };
 
   return (

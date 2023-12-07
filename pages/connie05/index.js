@@ -5,20 +5,23 @@ import { useRouter } from 'next/router';
 import CorrectFillInBlank from '@/components/correctFillInBlank';
 import { useState } from 'react';
 
-const ForbiddenWords = ['poop', 'ugly', 'poo', 'hate', 'bad', 'mean', 'late', 'sit'];
+const ForbiddenWords = ['poo', 'ugly', 'hate', 'bad', 'mean', 'stupid', 'dumb'];
 
 export default function Connie05() {
   const [textareaValue, setTextareaValue] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [answered, setAnswered] = useState(false);
 
   const handleInputChange = (e) => {
+    setAnswered(true);
     const inputValue = e.target.value;
     setTextareaValue(inputValue);
 
     const containsForbiddenWords = ForbiddenWords.some(word => inputValue.toLowerCase().includes(word.toLowerCase()));
 
     if (containsForbiddenWords) {
-      setErrorMessage('Please avoid using inappropriate words.');
+      setAnswered(false);
+      setErrorMessage('Hey, let’s use nice words okay?');
     } else {
       setErrorMessage('');
     }
@@ -56,36 +59,35 @@ export default function Connie05() {
         />
       </div>
 
-      <div className='relative'>
-        <p className='relative'>
+      {/* <div className='relative'> */}
+        <p className='my-6'>
           "I am _________."
         </p>
-        <p className='z-3 absolute -top-1 left-[38%]'>{word}</p>
-      </div>
+        {/* <p className='z-3 absolute -top-1 left-[38%]'>{word}</p> */}
+      {/* </div> */}
 
-      {/* <div className='grid grid-cols-2 w-full gap-x-10 gap-y-5 my-5'>
-        <button className='btn-gray' onClick={() => changeWord('brave')}>brave</button>
-        <button className='btn-gray' onClick={() => changeWord('smart')}>smart</button>
-        <button className='btn-gray' onClick={() => changeWord('a leader')}>a leader</button>
-        <button className='btn-gray' onClick={() => changeWord('important')}>important</button>
-        <button className='btn-gray' onClick={() => changeWord('loved')}>loved</button>
-        <button className='btn-gray' onClick={() => changeWord('creative')}>creative</button>
-      </div> */}
+      <textarea 
+        rows="3"
+        cols="30"
+        type="text"
+        placeholder="An example would be using the word “brave” so that it reads “I am brave.”
+        Now, try with a another word! Tap here to type."
+        className="w-[95%] h-[105px]"
+        value={textareaValue}
+        onChange={handleInputChange}
+        required>
+      </textarea>
 
-        <textarea 
-          rows="6"
-          type="text"
-          placeholder="An example would be using the word “brave” so that it reads “I am brave.”
-          Now, try with a another word! Tap here to type."
-          className="mt-3 mb-10"
-          value={textareaValue}
-          onChange={handleInputChange}
-          required>
-        </textarea>
+      {errorMessage && 
+        <p className='text-[#FC6C69] text-[20px] absolute z-3 bottom-[11%]'>
+          {errorMessage}
+        </p>}
 
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-
-      <button className='btn-blue' onClick={handleClick}>Check</button>
+      <button className='btn-blue w-[88%] absolute z-2 bottom-[2%]' 
+      onClick={handleClick}
+      disabled={!answered}>
+        Check
+      </button>
       {/* <TxtAnsPopUp currPage="Connie02"/> */}
 
       {ans? <CorrectFillInBlank/> 

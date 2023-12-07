@@ -2,7 +2,7 @@ import Image from 'next/image'
 import c02 from '../../public/kono/Kono02.png'
 import StatusBar from '@/components/statusBar'
 import { useRouter } from 'next/router';
-import TxtAnsPopUp from '@/components/txtAnsPopUp';
+import CorrectPopUp from '@/components/correctPopUp';
 import { useState } from 'react';
 
 
@@ -70,13 +70,13 @@ export default function Connie02() {
       </div> */}
 
       {/* <button className='btn-blue' onClick={handleClick}>Check</button> */}
-      {/* <TxtAnsPopUp currPage="Connie02"/> */}
+      {/* <CorrectPopUp currPage="Connie02"/> */}
 
       {ans === true? 
-        <TxtAnsPopUp />  
+        <CorrectPopUp sentence="That was a good affirmation!" route="/connie03"/>  
       : ans === false? 
         <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-          <div className="flex flex-col justify-around items-start w-full h-1/4 rounded-t-3xl bg-white p-8">
+          <div className="flex flex-col justify-around items-start w-full h-1/3 rounded-t-3xl bg-white p-8">
               <h3>
                   🤔 &nbsp;&nbsp; Hm... that’s not quite right. 
               </h3>

@@ -52,7 +52,7 @@ export default function Connie00() {
         </p>
       </div>
 
-      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[60%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
+      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[65%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
       onClick={()=>setDef(false)}>
         <Image
           src={c0}

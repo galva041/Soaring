@@ -1,12 +1,11 @@
-import { useState } from "react";
 import { useRouter } from 'next/router';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-const TxtAnsPopUp = () => {
+const CorrectPopUp = ({sentence, route}) => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/connie03');
+        router.push(route);
     };
     
     return (
@@ -18,7 +17,7 @@ const TxtAnsPopUp = () => {
                     </h3>
 
                     <h2 className="mb-3">
-                        That was a good affirmation!
+                        {sentence}
                     </h2>
 
                     <button className="btn-blue" onClick={handleClick}>Next
@@ -44,4 +43,4 @@ const TxtAnsPopUp = () => {
     )
 };
 
-export default TxtAnsPopUp;
+export default CorrectPopUp;

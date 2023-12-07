@@ -47,7 +47,7 @@ export default function Instructions() {
             </div>
         </div>
         
-        <button className='btn-blue mt-5 md:mt-48' onClick={handleClick}>Let's Go!
+        <button className='btn-blue mt-4 md:mt-48' onClick={handleClick}>Let's Go!
         <HiOutlineArrowNarrowRight className='ml-2'/></button>
     </main>
   )

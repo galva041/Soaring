@@ -25,7 +25,7 @@ export default function Connie011() {
         </p>
       </div>
 
-      <div className='mt-9 mb-8 h-min w-[78%] sm:w-[65%] md:w-[50%] lg:w-[35%] xl:w-[25%]'>
+      <div className='mt-9 mb-8 h-min w-[82%] sm:w-[65%] md:w-[50%] lg:w-[35%] xl:w-[25%]'>
         <Image
           src={c00}
           alt="Connie00"

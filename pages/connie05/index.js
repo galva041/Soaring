@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import CorrectFillInBlank from '@/components/correctFillInBlank';
 import { useState } from 'react';
 
-const ForbiddenWords = ['poo', 'ugly', 'hate', 'bad', 'mean', 'stupid', 'dumb'];
+const ForbiddenWords = ['poo', 'ugly', 'hate', 'bad', 'mean', 'stupid', 'dumb', 'fuck', 'dick', 'fat', 'stink', 'smelly','annoy','bitch','shit'];
 
 export default function Connie05() {
   const [textareaValue, setTextareaValue] = useState('');
@@ -43,11 +43,11 @@ export default function Connie05() {
   return (
     <main>
 
-      <StatusBar fraction='5/5' finish="0"/>
+      <StatusBar fraction='7/8' finish="0"/>
 
       {/* <div className='flex flex-col w-full'> */}
       <p>
-        You’re almost there! Finally, complete this sentence with a word about you.
+        You’re almost there! Finally, complete this sentence with a positive word about you.
       </p>
       {/* </div> */}
 
@@ -72,7 +72,7 @@ export default function Connie05() {
         type="text"
         placeholder="An example would be using the word “brave” so that it reads “I am brave.”
         Now, try with a another word! Tap here to type."
-        className="w-[95%] h-[105px]"
+        className="w-[95%] h-[85px]"
         value={textareaValue}
         onChange={handleInputChange}
         required>

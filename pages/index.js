@@ -33,6 +33,7 @@ export default function Home() {
         src={landing}
         alt="landing"
         className="object-contain"
+        priority
       />
     </div>
       
@@ -42,8 +43,11 @@ export default function Home() {
       Hi there, nice to meet you! We can’t wait for you to test our fun, new app! 😄 
     </p>
 
-    <button className='btn-blue mt-10 mb-[14%] lg:mb-10' onClick={handleClick}>Get Started 
-    <HiOutlineArrowNarrowRight className='ml-2'/></button>
+    <button className='btn-blue mt-10 mb-[14%] lg:mb-10' onClick={handleClick}>
+      Get Started 
+      <HiOutlineArrowNarrowRight className='ml-2'/>
+    </button>
+    
     </main>
   )
 }

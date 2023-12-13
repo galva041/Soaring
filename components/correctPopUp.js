@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-const CorrectPopUp = ({sentence, route}) => {
+const CorrectPopUp = ({message, sentence, route}) => {
     const router = useRouter();
 
     const handleClick = () => {
@@ -11,12 +11,12 @@ const CorrectPopUp = ({sentence, route}) => {
     return (
         <div className="w-screen px-6"> 
             <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-                <div className="flex flex-col justify-around items-start w-full h-1/4 rounded-t-3xl bg-white p-8">
+                <div className="flex flex-col justify-around items-start w-full h-min rounded-t-3xl bg-white p-8">
                     <h3>
-                        ✅ &nbsp;&nbsp; Great job! 
+                        ✅ &nbsp;&nbsp; {message} 
                     </h3>
 
-                    <h2 className="mb-3">
+                    <h2 className="mt-2.5 mb-6">
                         {sentence}
                     </h2>
 

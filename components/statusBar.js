@@ -9,19 +9,34 @@ const StatusBar = ({fraction, finish}) => {
     var dynamicWidth = {};
     var dynamicColor = { backgroundColor: '#E0E0E0',};
 
-    if (fraction === "0/5") {
-        dynamicWidth = { width: '10px',}
-    } else if (fraction === "1/5") {
-        dynamicWidth = { width: '20%',}
-    } else if (fraction === "2/5") {
-        dynamicWidth = { width: '40%',}
-    } else if (fraction === "3/5") {
-        dynamicWidth = { width: '60%',}
-    } else if (fraction === "4/5") {
-        dynamicWidth = { width: '80%',}
-    } else {
-        dynamicWidth = { width: '100%',}
-        dynamicColor = { backgroundColor: '#00C49A',}
+    switch (fraction) {
+        case '0/8':
+            dynamicWidth = { width: '10px' };
+            break;
+        case '1/8':
+            dynamicWidth = { width: '12.5%' };
+            break;
+        case '2/8':
+            dynamicWidth = { width: '25%' };
+            break;
+        case '3/8':
+            dynamicWidth = { width: '37.5%' };
+            break;
+        case '4/8':
+            dynamicWidth = { width: '50%' };
+            break;
+        case '5/8':
+            dynamicWidth = { width: '62.5%' };
+            break;
+        case '6/8':
+            dynamicWidth = { width: '75%' };
+            break;
+        case '7/8':
+            dynamicWidth = { width: '87.5%' };
+            break;
+        default:
+            dynamicWidth = { width: '100%' };
+            dynamicColor = { backgroundColor: '#00C49A' };
     }
 
 

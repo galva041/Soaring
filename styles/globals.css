@@ -42,7 +42,7 @@
   } */
   
   textarea {
-    @apply text-black text-[14px] border-2 border-outline-gray w-full h-20 p-3 rounded-md
+    @apply text-black text-[13px] border-2 border-outline-gray w-full h-20 p-3 rounded-md
   }
 
   textarea:placeholder-shown {

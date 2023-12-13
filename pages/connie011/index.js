@@ -17,11 +17,11 @@ export default function Connie011() {
       className=""
     >
 
-      <StatusBar fraction='0/5' finish="0"/>
+      <StatusBar fraction='2/8' finish="0"/>
 
       <div className='flex flex-col w-full'>
         <p>
-          Sometimes Kono struggles to say the right things, can you help them?
+          Can you think of some positive things that Kono can say about themself?
         </p>
       </div>
 

@@ -26,10 +26,10 @@ export default function Connie02() {
 
   return (
     <main>
-      <StatusBar fraction='2/5' finish="0"/>
+      <StatusBar fraction='4/8' finish="0"/>
 
       <p>
-        Can you help Kono finish this affirmation?
+        Can you help Kono finish this sentence?
       </p>
 
       <div className='h-min w-[74%] sm:w-[50%] md:w-[37%] lg:w-[30%] xl:w-[25%]'>
@@ -73,15 +73,18 @@ export default function Connie02() {
       {/* <CorrectPopUp currPage="Connie02"/> */}
 
       {ans === true? 
-        <CorrectPopUp sentence="That was a good affirmation!" route="/connie03"/>  
+        <CorrectPopUp 
+        message="Well done!"
+        sentence="That was an awesome sentence! It’s important for Kono to remind themself how wonderful they are!" 
+        route="/connie03"/>  
       : ans === false? 
         <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
-          <div className="flex flex-col justify-around items-start w-full h-1/3 rounded-t-3xl bg-white p-8">
+          <div className="flex flex-col justify-around items-start w-full h-min rounded-t-3xl bg-white p-8">
               <h3>
-                  🤔 &nbsp;&nbsp; Hm... that’s not quite right. 
+                  🤔 &nbsp;&nbsp; Hmm... that’s not quite right. 
               </h3>
 
-              <h2 className="mb-3">
+              <h2 className="mt-2.5 mb-6">
                   That statement is true, but that doesn’t tell Kono how amazing they are!
               </h2>
 

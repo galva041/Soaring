@@ -32,11 +32,11 @@ export default function Connie04() {
 
   return (
     <main>
-      <StatusBar fraction='4/5' finish="0"/>
+      <StatusBar fraction='6/8' finish="0"/>
 
       <div className='flex flex-col w-full'>
         <p className='text-[21px]'>
-            Thank you for helping Kono! Now, it’s your turn!  Pick as many things you would say about you.
+          Thank you for helping Kono! Now, it’s your turn! Pick as many positive sentences you would say about you
         </p>
       </div>
 
@@ -76,7 +76,10 @@ export default function Connie04() {
       </button>
 
       {correct? 
-      <CorrectPopUp sentence="Those are great affirmations!" route="/connie05" />
+      <CorrectPopUp 
+      message="Fantastic job!"
+      sentence="Just as you helped Kono, you should also remind yourself sentences like these to remember how wonderful you are too!" 
+      route="/connie05" />
       : null}
 
     </main>

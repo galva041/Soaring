@@ -41,7 +41,7 @@ export default function Connie02() {
       </div>
 
       <p>
-        "I am _________."
+        "I am <span className='font-sans'>_________</span>."
       </p>
 
       <div className='grid grid-cols-2 w-full gap-x-10 gap-y-5 my-5'>

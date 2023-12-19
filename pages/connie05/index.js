@@ -61,7 +61,7 @@ export default function Connie05() {
 
       {/* <div className='relative'> */}
         <p className='my-6'>
-          "I am _________."
+          "I am <span className='font-sans'>_________</span>."
         </p>
         {/* <p className='z-3 absolute -top-1 left-[38%]'>{word}</p> */}
       {/* </div> */}

@@ -4,10 +4,13 @@ import StatusBar from '@/components/statusBar'
 import { useRouter } from 'next/router';
 import CorrectFillInBlank from '@/components/correctFillInBlank';
 import { useState } from 'react';
+import useSound from 'use-sound';
 
+import correctDing from '../../public/sounds/correct.mp3';
 const ForbiddenWords = ['poo', 'ugly', 'hate', 'bad', 'mean', 'stupid', 'dumb', 'fuck', 'dick', 'fat', 'stink', 'smelly','annoy','bitch','shit'];
 
 export default function Connie05() {
+  const [play] = useSound(correctDing);
   const [textareaValue, setTextareaValue] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [answered, setAnswered] = useState(false);
@@ -32,6 +35,7 @@ export default function Connie05() {
   var [ans, setAns] = useState(false);
   const handleClick = () => {
     setAns(true);
+    play();
   };
 
   var [word, setWord] = useState('');

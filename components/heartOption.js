@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { IoHeart } from "react-icons/io5";
+import useSound from 'use-sound';
+
+import pop from '../public/sounds/pop.mp3';
 
 const HeartOption = ({id, sentence, onChange}) => {
+  const [playPop] = useSound(pop); 
   const [checked, setChecked] = useState(false);
 
   const handleCheckboxChange = (event) => {
     setChecked(!checked);
     onChange(event.target.checked);
+    playPop();
   };
 
   return (

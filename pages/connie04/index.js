@@ -7,9 +7,13 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Affirmation from '@/components/affirmation';
 import HeartOption from '@/components/heartOption';
 import CorrectPopUp from '@/components/correctPopUp';
+import useSound from 'use-sound';
+
+import correctDing from '../../public/sounds/correct.mp3';
 
 
 export default function Connie04() {
+  const [play] = useSound(correctDing);
   var [correct, setCorrect] = useState(false);
 
   var [options, setOptions] = useState([false, false, false, false, false, false]);
@@ -28,6 +32,7 @@ export default function Connie04() {
 
   const handleClick = () => {
     setCorrect(true);
+    play();
   };
 
   return (

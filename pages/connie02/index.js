@@ -4,9 +4,14 @@ import StatusBar from '@/components/statusBar'
 import { useRouter } from 'next/router';
 import CorrectPopUp from '@/components/correctPopUp';
 import { useState } from 'react';
+import useSound from 'use-sound';
 
+import correctDing from '../../public/sounds/correct.mp3';
+import incorrectDing from '../../public/sounds/incorrect.mp3';
 
 export default function Connie02() {
+  const [playCorrect] = useSound(correctDing);
+  const [playIncorrect] = useSound(incorrectDing);
   const router = useRouter();
 
   var [ans, setAns] = useState(null);
@@ -19,8 +24,10 @@ export default function Connie02() {
     // setWord(newWord);
     if (word === "running" || word === "late") {
       setAns(false);
+      playIncorrect();
     } else {
       setAns(true);
+      playCorrect();
     }
   };
 

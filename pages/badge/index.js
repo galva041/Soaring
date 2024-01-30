@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'
 import badge from '../../public/badges/Badge.png'
 import StatusBar from '@/components/statusBar'
+import useSound from 'use-sound';
 
 
 export default function Badge() {

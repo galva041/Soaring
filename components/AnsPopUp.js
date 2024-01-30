@@ -2,9 +2,20 @@ import { useState } from "react";
 import { useRouter } from 'next/router';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Cormorant } from "next/font/google";
+import useSound from 'use-sound';
+
+import correctDing from '../public/sounds/correct.mp3';
+import incorrectDing from '../public/sounds/incorrect.mp3';
 
 const AnsPopUp = ({currPage}) => {
+    const [playCorrect] = useSound(correctDing);
+    const [playIncorrect] = useSound(incorrectDing);
     const router = useRouter();
+
+    const correctAns = () => {
+        setCor(true);
+        playCorrect();
+    }
 
     const handleClick = () => {
         switch (currPage) {
@@ -41,17 +52,17 @@ const AnsPopUp = ({currPage}) => {
         <div className="w-screen px-6 ">
             {currPage === "Connie01" ? 
                 <div className='grid grid-flow-row gap-3 w-full mb-4 z-0 relative'>
-                    <button className='btn-gray' onClick={() => setInc(true)}>Trees are green.</button>
-                    <button className='btn-gray' onClick={() => setCor(true)}>I am kind.</button>
-                    <button className='btn-gray' onClick={() => setInc(true)}>Jupiter is a planet.</button>
-                    <button className='btn-gray' onClick={() => setInc(true)}>Sometimes I get sunburnt.</button>
+                    <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>Trees are green.</button>
+                    <button className='btn-gray' onClick={() => correctAns()}>I am kind.</button>
+                    <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>Jupiter is a planet.</button>
+                    <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>Sometimes I get sunburnt.</button>
                 </div>
             : 
                 <div className='grid grid-flow-row gap-3 w-full mb-4 z-0 relative'>
-                    <button className='btn-gray' onClick={() => setInc(true)}>Dogs have tails.</button>
-                    <button className='btn-gray' onClick={() => setInc(true)}>Pasta is from Italy.</button>
-                    <button className='btn-gray' onClick={() => setInc(true)}>There are pyramids in Egypt.</button>
-                    <button className='btn-gray' onClick={() => setCor(true)}>I am a good friend.</button>
+                    <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>Dogs have tails.</button>
+                    <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>Pasta is from Italy.</button>
+                    <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>There are pyramids in Egypt.</button>
+                    <button className='btn-gray' onClick={() => correctAns()}>I am a good friend.</button>
                 </div>
             }
 

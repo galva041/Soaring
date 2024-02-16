@@ -6,7 +6,7 @@ const CorrectFillInBlank = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/badge');
+        router.push('/survey');
     };
     
     return (

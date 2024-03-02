@@ -8,7 +8,7 @@ export default function Instructions() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/connie00');
+    router.push('/map');
   };
 
   return (

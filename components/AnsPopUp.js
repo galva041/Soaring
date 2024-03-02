@@ -20,10 +20,10 @@ const AnsPopUp = ({currPage}) => {
     const handleClick = () => {
         switch (currPage) {
             case 'Connie01':
-                router.push('/connie02');
+                router.push('/break?breakNum=1');
                 break;
             default:
-                router.push('/connie04');
+                router.push('/break?breakNum=3');
         }
     };
 

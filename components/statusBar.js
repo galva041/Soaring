@@ -10,29 +10,29 @@ const StatusBar = ({fraction, finish}) => {
     var dynamicColor = { backgroundColor: '#E0E0E0',};
 
     switch (fraction) {
-        case '0/8':
-            dynamicWidth = { width: '10px' };
+        case '1/9':
+            dynamicWidth = { width: '11.11%' };
             break;
-        case '1/8':
-            dynamicWidth = { width: '12.5%' };
+        case '2/9':
+            dynamicWidth = { width: '22.22%' };
             break;
-        case '2/8':
-            dynamicWidth = { width: '25%' };
+        case '3/9':
+            dynamicWidth = { width: '33.33%' };
             break;
-        case '3/8':
-            dynamicWidth = { width: '37.5%' };
+        case '4/9':
+            dynamicWidth = { width: '44.44%' };
             break;
-        case '4/8':
-            dynamicWidth = { width: '50%' };
+        case '5/9':
+            dynamicWidth = { width: '55.55%' };
             break;
-        case '5/8':
-            dynamicWidth = { width: '62.5%' };
+        case '6/9':
+            dynamicWidth = { width: '66.66%' };
             break;
-        case '6/8':
-            dynamicWidth = { width: '75%' };
+        case '7/9':
+            dynamicWidth = { width: '77.77%' };
             break;
-        case '7/8':
-            dynamicWidth = { width: '87.5%' };
+        case '8/9':
+            dynamicWidth = { width: '88.88%' };
             break;
         default:
             dynamicWidth = { width: '100%' };

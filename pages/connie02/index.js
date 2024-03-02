@@ -33,7 +33,7 @@ export default function Connie02() {
 
   return (
     <main>
-      <StatusBar fraction='4/8' finish="0"/>
+      <StatusBar fraction='5/9' finish="0"/>
 
       <p>
         Can you help Kono finish this sentence?
@@ -82,8 +82,8 @@ export default function Connie02() {
       {ans === true? 
         <CorrectPopUp 
         message="Well done!"
-        sentence="That was an awesome sentence! It’s important for Kono to remind themself how wonderful they are!" 
-        route="/connie03"/>  
+        sentence="That was an awesome sentence! It’s important for Kono to remind himself how wonderful they are!" 
+        route="/break?breakNum=2"/>  
       : ans === false? 
         <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
           <div className="flex flex-col justify-around items-start w-full h-min rounded-t-3xl bg-white p-8">

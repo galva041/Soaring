@@ -7,9 +7,9 @@ import StatusBar from '@/components/statusBar'
 
 
 export default function RocketBroke() {
-  useEffect(() => {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FFFFFF');
-  }, []);
+  // useEffect(() => {
+  //   document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FFFFFF');
+  // }, []);
 
   const router = useRouter();
 

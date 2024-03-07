@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Image from 'next/image'
 import badge from '../../public/badges/Badge.png'
 import StatusBar from '@/components/statusBar'
@@ -8,9 +9,12 @@ import { RiHome2Line, RiCoinFill } from "react-icons/ri";
 
 
 export default function Badge() {
+  useEffect(() => {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FFFFFF');
+  }, []);
+
   const router = useRouter();
-  // const data = router.query;
-  // console.log(data);
+
   const handleClick = () => {
     router.push('/map?cloud=1');
   };

@@ -5,6 +5,7 @@ import break2Kono from '../../public/konov2/break/Break02.png';
 import break3Kono from '../../public/konov2/break/Break03.png';
 import break4Kono from '../../public/konov2/break/Break04.png';
 import break5Kono from '../../public/konov2/break/Break05.png'; 
+import break6Kono from '../../public/konov2/break/Break06.png'; 
 import StatusBar from '@/components/statusBar'
 import useSound from 'use-sound';
 import { IoChevronBackOutline } from "react-icons/io5";
@@ -46,7 +47,7 @@ export default function Break() {
             break;
         case "4": 
             totalCoins = 30;
-            message = "Kono needs 30 coins to re-build his rocket, can you help him?";
+            message = "Kono needs 30 coins to rebuild his rocket, can you help him?";
             KonoImg = break4Kono;
             nextPage = "break?breakNum=5";
             btnText = "Yes, let's rebuild it!";
@@ -61,7 +62,7 @@ export default function Break() {
         case "6": 
             totalCoins = 15;
             message = "Kono’s rocket is now ready to fly and he’s on his way home!";
-            KonoImg = break4Kono;
+            KonoImg = break6Kono;
             nextPage = "survey";
             btnText = "Submit Feedback";
             break;
@@ -91,20 +92,22 @@ export default function Break() {
                 </div>
             </div>
 
-            <div className='flex flex-col mt-10 mb-20 space-y-9 justify-center items-center'>
-                <div className={`flex space-x-3 justify-center items-center ${breakNum >= 4? 'hidden' : 'block'}`}>
+            <div className='flex flex-col mt-10 mb-8 space-y-9 justify-center items-center'>
+                {breakNum < 4 && 
+                <div className={`flex space-x-3 justify-center items-center`}>
                     <h1 className='text-black text-[37.5px]'>
                         +10
                     </h1>
 
                     <RiCoinFill size={37} color="#FBAF00"/>
-                </div>
+                </div>}
 
-                <p className={`text-left w-11/12 ${breakNum == 4? 'block' : 'hidden'}`}>
+                {breakNum == 4 && 
+                <p className={`text-left self-start w-[95%] mb-[18%]`}>
                     {message}
-                </p>
+                </p>}
 
-                <div className='h-min w-4/5 sm:w-1/3 md:w-1/3 lg:w-1/4'>
+                <div className={`h-min ${breakNum >= 5? 'w-3/5': 'w-4/5'} sm:w-1/3 md:w-1/3 lg:w-1/4`}>
                     <Image
                     src={KonoImg}
                     alt="breakImg"
@@ -112,9 +115,10 @@ export default function Break() {
                     />
                 </div>
 
-                <p className={`text-center w-full ${breakNum == 4? 'hidden' : 'block'}`}>
+                {breakNum != 4 && 
+                <p className={`text-center w-full`}>
                     {message}
-                </p>
+                </p>}
             </div>
 
             <button className="btn-blue" onClick={handleClick}>

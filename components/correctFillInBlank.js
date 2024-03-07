@@ -6,7 +6,7 @@ const CorrectFillInBlank = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/survey');
+        router.push('/break?breakNum=6');
     };
     
     return (

@@ -10,11 +10,11 @@ export default function Connie01() {
     <main
       className="z-0"
     >   
-        <StatusBar fraction='3/8' finish="0"/>
+        <StatusBar fraction='4/9' finish="0"/>
 
         <div className='flex flex-col w-full'>
             <p>
-               What is a positive sentence that Kono can say about themself?
+               What is a positive sentence that Kono can say about himself?
             </p>
         </div>
 

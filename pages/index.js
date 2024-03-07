@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import landing from '../public/kono/Landing.png';
@@ -8,10 +8,14 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  useEffect(() => {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#EBF3FA');
+  }, []);
+
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/instructions');
+    router.push('/map?cloud=0');
   };
 
   return (

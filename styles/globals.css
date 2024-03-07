@@ -33,6 +33,10 @@
     @apply font-semibold text-black text-[12px]
   }
 
+  h5 {
+    @apply font-semibold text-black text-[32px]
+  }
+
   /* input {
     @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md mb-2
   } */

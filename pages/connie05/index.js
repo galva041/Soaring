@@ -47,7 +47,7 @@ export default function Connie05() {
   return (
     <main>
 
-      <StatusBar fraction='7/8' finish="0"/>
+      <StatusBar fraction='8/9' finish="0"/>
 
       {/* <div className='flex flex-col w-full'> */}
       <p>

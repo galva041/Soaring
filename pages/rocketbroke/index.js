@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
-import c0 from '../../public/konov2/brokenrocket.png'
+import rocket from '../../public/videos/KonoGame02.mp4';
 import StatusBar from '@/components/statusBar'
 // import Definition from '@/components/definition';
 
@@ -27,14 +27,24 @@ export default function RocketBroke() {
         
       </div>
 
-      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[65%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
+      {/* <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[65%] sm:w-[50%] md:w-[50%] lg:w-[30%] xl:w-[26%]'
       >
         <Image
           src={c0}
           alt="Connie0"
           className="object-contain"
         />
-      </div>
+      </div> */}
+
+      <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="w-[70%] sm:w-[40%] md:w-[30%] lg:w-[25%] xl:w-[22%] h-auto">
+        <source src={rocket} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       <div className='flex flex-col w-full justify-center items-center'>
         <button className='btn-blue mt-7 my-3' onClick={handleClick}>Oh no!</button>

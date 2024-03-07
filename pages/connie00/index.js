@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
-import c0 from '../../public/konov2/brokenrocket.png'
+import c0 from '../../public/videos/KonoGame01.mp4';
 import StatusBar from '@/components/statusBar'
 // import Definition from '@/components/definition';
-
 
 export default function Connie00() {
   useEffect(() => {
@@ -58,7 +57,7 @@ export default function Connie00() {
         &nbsp; are positive statements you tell yourself to remind yourself of all the amazing things about you. */}
       </div>
 
-      <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[60%] sm:w-[50%] md:w-[25%] lg:w-[25%] xl:w-[26%]'
+      {/* <div className='md:pt-[12%] md:pb-[5%] lg:p-0 h-min w-[60%] sm:w-[50%] md:w-[25%] lg:w-[25%] xl:w-[26%]'
       // onClick={()=>setDef(false)}
       >
         <Image
@@ -66,7 +65,17 @@ export default function Connie00() {
           alt="Connie0"
           className="object-contain"
         />
-      </div>
+      </div> */}
+
+      <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="w-[70%] sm:w-[40%] md:w-[30%] lg:w-[25%] xl:w-[22%] h-auto">
+        <source src={c0} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       <div className='flex flex-col w-full justify-center items-center'>
         <button className='btn-blue mt-7 my-3' onClick={handleClick}>Hi Kono!</button>

@@ -13,6 +13,18 @@ const nextConfig = {
         },
       },
     });
+    
+    config.module.rules.push({
+      test: /\.(mp4)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          publicPath: '/_next/static/videos/', // Customize the public path if needed
+          outputPath: 'static/videos/', // Output path for the bundled file
+          name: '[name].[ext]', // Name of the output file
+        },
+      },
+    });
     return config;
   },
 };

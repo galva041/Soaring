@@ -5,7 +5,7 @@ import break2Kono from '../../public/konov2/break/Break02.png';
 import break3Kono from '../../public/konov2/break/Break03.png';
 import break4Kono from '../../public/konov2/break/Break04.png';
 import break5Kono from '../../public/konov2/break/Break05.png'; 
-import break6Kono from '../../public/konov2/break/Break06.png'; 
+import break6Kono from '../../public/videos/KonoGame06.mp4'; 
 import StatusBar from '@/components/statusBar'
 import useSound from 'use-sound';
 import { IoChevronBackOutline } from "react-icons/io5";
@@ -107,13 +107,25 @@ export default function Break() {
                     {message}
                 </p>}
 
+                {breakNum < 6 &&
                 <div className={`h-min ${breakNum >= 5? 'w-3/5': 'w-4/5'} sm:w-1/3 md:w-1/3 lg:w-1/4`}>
                     <Image
                     src={KonoImg}
                     alt="breakImg"
                     className="object-contain"
                     />
-                </div>
+                </div>}
+
+                {breakNum == 6 && 
+                <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-[65%] sm:w-[44%] md:w-[36%] lg:w-[28%] h-auto">
+                    <source src={KonoImg} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>}
 
                 {breakNum != 4 && 
                 <p className={`text-center w-full`}>

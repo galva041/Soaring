@@ -38,7 +38,7 @@
   }
 
   h6 {
-    @apply text-blue text-[12px]
+    @apply text-black text-[26px] font-semibold
   }
 
   /* input {

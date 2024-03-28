@@ -15,7 +15,7 @@ export default function Home() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/map?cloud=0');
+    router.push('/childorparent');
   };
 
   return (

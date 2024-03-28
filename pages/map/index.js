@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
 import { IoChevronBackOutline } from "react-icons/io5";
-import { RiShieldStarLine } from "react-icons/ri";
+import { RiShieldStarLine, RiHome2Line } from "react-icons/ri";
 import CloudButton from '@/components/cloudButton';
 import DecorativeClouds from '@/components/decorativeClouds';
 
@@ -14,15 +14,24 @@ export default function Map() {
 
   var totalBadges = 0;
   var nextLessonLocked = true;
+  var greenBounce = 'Start Here';
+  var greenBounceLoc = '-top-[27%] right-[20%]';
+  var greenPointLoc = 'left-8';
 
   switch (cloud) {
     case "0":
       totalBadges = 0;
       nextLessonLocked = true;
+      greenBounce = 'Start Here';
+      greenBounceLoc = '-top-[27%] right-[20%]';
+      greenPointLoc = 'left-8';
       break;
     case "1": 
       totalBadges = 1;
       nextLessonLocked = false;
+      greenBounce = 'You are here';
+      greenBounceLoc = '-top-[40%] left-[20%]';
+      greenPointLoc = 'left-9';
       break;
   }
 
@@ -37,9 +46,16 @@ export default function Map() {
       <DecorativeClouds />
       
       <div className='z-10 flex justify-between w-screen pl-6 pr-10'>
-        <button className="btn-nav" onClick={() => router.back()}>
+        <div className='flex'>
+          <button className="btn-nav" onClick={() => router.back()}>
           <IoChevronBackOutline size={22} color="#0978D5"/>
-        </button>
+          </button>
+
+          <button className="btn-nav" onClick={() => router.push('/')}>
+            <RiHome2Line size={22} color="#0978D5" />
+          </button>
+        </div>
+
 
         <div className='flex justify-center items-center'>
           <RiShieldStarLine size={22} color="#313131"/>
@@ -54,23 +70,22 @@ export default function Map() {
       <CloudButton lesson="Our Positivity" t='top-[0%]' l='left-[20%]'/>
       
       <CloudButton lesson="My Hero" t='-top-[7%]' l='right-[20%]'/>
-      <CloudButton lesson="My Amazing Mind" route="map?cloud=1" locked={nextLessonLocked} t='-top-[15%]' l='left-[20%]'/>
+      <CloudButton lesson="My Amazing Mind" route="uhoh" locked={nextLessonLocked} t='-top-[15%]' l='left-[20%]'/>
 
-      <CloudButton lesson="Positivity" route="connie00" locked={false} t='-top-[22%]' l='right-[20%]'/>
+      <CloudButton lesson="Meet Kono" route="connie00" complete={!nextLessonLocked} locked={false} t='-top-[22%]' l='right-[20%]'/>
         
 
-      <div className='relative -top-[27%] right-[20%] z-10 animate-bounce'>
+      <div className={`relative ${greenBounceLoc} z-10 animate-bounce`}>
         <h4 className='text-white bg-green mt-12 px-3 py-1.5 rounded-md'>
-          Start Here
+          {greenBounce}
         </h4>
 
-        <div className="absolute top-8 left-8 
+        <div className={`absolute top-8 ${greenPointLoc}
           border-l-[12px] border-l-transparent
           border-b-[18px] border-b-green
-          border-r-[12px] border-r-transparent">
+          border-r-[12px] border-r-transparent`}>
         </div>
       </div>
-        {/* </div> */}
         
     </main>
   )

@@ -37,6 +37,10 @@
     @apply font-semibold text-black text-[32px]
   }
 
+  h6 {
+    @apply text-blue text-[12px]
+  }
+
   /* input {
     @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md mb-2
   } */
@@ -61,6 +65,14 @@
 @layer components {
   .btn-nav {
     @apply flex justify-center items-center m-1 w-9 h-9 rounded-full bg-light-blue 
+  }
+  
+  .btn-parent-nav {
+    @apply flex flex-col justify-center items-center text-blue text-[12px]
+  }
+
+  .btn-parent-nav:disabled {
+    @apply text-txt-gray
   }
 
   .btn-transparent {

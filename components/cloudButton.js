@@ -11,7 +11,7 @@ import MyHero from '../public/konov2/clouds/MyHero.png'
 import Positivity from '../public/konov2/clouds/Positivity.png'
 
 
-const CloudButton = ({lesson, route = '/map', locked = true, t, l}) => {
+const CloudButton = ({lesson, route = '/map', complete = false, locked = true, t, l}) => {
     const router = useRouter();
 
     const handleClick = () => {
@@ -29,7 +29,7 @@ const CloudButton = ({lesson, route = '/map', locked = true, t, l}) => {
         </div>
 
         <button className={`absolute z-10 flex w-max flex-col justify-center items-center`} onClick={locked? null: handleClick}>
-          <div className={`flex flex-col justify-center items-center w-16 h-16 rounded-full ${locked? 'bg-bar-gray' : 'bg-blue'}`}>
+          <div className={`flex flex-col justify-center items-center w-16 h-16 rounded-full ${locked? 'bg-bar-gray' : complete? 'bg-green': 'bg-blue'}`}>
             <div className='border-4 border-white p-3 rounded-full'>
                 {locked? <HiOutlineLockClosed size={22} color="#777777"/>
                 : <IoMdStarOutline size={22} color="#FFFFFF"/>}

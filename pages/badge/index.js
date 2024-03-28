@@ -52,7 +52,7 @@ export default function Badge() {
 
         <div className='flex flex-col w-full text-center mb-14'>
           <p>
-              Positivity Badge
+              Meet Kono Badge
           </p>
 
           <h2 className='badge-desc'>

@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'green': '#00C49A',
+        'leaf-green': '#4EAC5E',
         'bar-gray': '#E0E0E0',
         'black': '#313131',
         'blue': '#0978D5',
@@ -19,6 +20,7 @@ module.exports = {
         'gray-blue': '#EBF3FA',
         'yellow': '#FBAF00',
         'pink': '#FFA3AF',
+        'purple': '#BEA7E5',
       },
       fontFamily: {
         "poppins": "var(--font-poppins)",

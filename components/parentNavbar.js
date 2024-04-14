@@ -5,11 +5,11 @@ const ParentNavbar = (home, insights, locked = true) => {
     const router = useRouter();
 
     const navToParentHome = () => {
-        router.push('/parent/parentHome');
+        router.push('/parent');
     };
 
     const navToParentInsights = () => {
-        router.push('/parent/parentInsights');
+        router.push('/parent/insights');
     };
     
     return (

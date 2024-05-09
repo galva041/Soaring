@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wave: {
+          '0%, 100%': { transform: 'rotate(-7deg)' },
+          '50%': { transform: 'rotate(7deg)' },
+        },
+        'grow-shrink': {
+          '0%, 100%': { transform: 'scale(0.9)' },
+          '50%': { transform: 'scale(1)' },
+        },
+      },
       colors: {
         'green': '#00C49A',
         'leaf-green': '#4EAC5E',
@@ -25,12 +35,17 @@ module.exports = {
       fontFamily: {
         "poppins": "var(--font-poppins)",
       },
+      animation: {
+        wave: 'wave 1s ease-in infinite',
+        'grow-shrink': 'grow-shrink 5s infinite',
+      }
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       //   'gradient-conic':
       //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       // },
     },
+
   },
   plugins: [],
 }

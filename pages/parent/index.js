@@ -35,9 +35,15 @@ export default function ParentHome() {
             </button>
         </div>
 
-        <div className='flex items-center justify-around space-x-14 w-screen mt-3 mb-5'>
-            <h5>Hey there! 👋</h5> 
-            <RiSearchLine size={28} color='#313131'/>
+        <div className='flex items-center justify-between w-screen px-5 mt-3 mb-5'>
+          <div className='flex items-center space-x-2'>
+            <h5>
+              Hey there! 
+            </h5> 
+            <span className='animate-wave text-[32px]'>👋</span>
+          </div>
+
+          <RiSearchLine size={28} color='#313131'/>
         </div>
 
         <div className='flex-col justify-center item-center space-y-5 mb-14'>

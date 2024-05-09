@@ -35,69 +35,56 @@ export default function ParentHome() {
             </button>
         </div>
 
-        <div className='flex items-center justify-between w-screen px-5 mt-3 mb-5'>
-          <div className='flex items-center space-x-2'>
-            <h5>
-              Hey there! 
-            </h5> 
-            <span className='animate-wave text-[32px]'>👋</span>
+        <div className='flex items-center justify-between w-full mt-3 mb-5'>
+          <div> 
+            <div className='flex items-center space-x-2'>
+              <h5>
+                Hey there! 
+              </h5> 
+              <span className='animate-wave text-[32px]'>👋</span>
+            </div>
           </div>
 
           <RiSearchLine size={28} color='#313131'/>
         </div>
 
-        <div className='flex-col justify-center item-center space-y-5 mb-14'>
-          <ParentOption title="Listening Corner" />
-          <ParentOption title="Reading Corner"/>
-          <ParentOption title="Ask Other Parents"/> 
-
-          <div className='space-y-3'>
-            <h6>Ask the Experts</h6>
-
-            <div className='overflow-x-auto flex space-x-4 w-[344px]'>
-              <div className='flex-col justify-center items-center'>
-                <FaCircle size={72} color='#777777'/>
-                <h4 className='text-center pt-2'>Bilkis</h4>
-              </div>
-
-              <div className='flex-col justify-center items-center'>
-                <FaCircle size={72} color='#777777'/>
-                <h4 className='text-center pt-2'>Dr. Diane</h4>
-              </div>
-
-              <div className='flex-col justify-center items-center'>
-                <FaCircle size={72} color='#777777'/>
-                <h4 className='text-center pt-2'>Chris</h4>
-              </div>
-
-              <div className='flex-col justify-center items-center'>
-                <FaCircle size={72} color='#777777'/>
-                <h4 className='text-center pt-2'>Dr. Paul</h4>
-              </div>
-
-              <div className='flex-col justify-center items-center'>
-                <FaCircle size={72} color='#777777'/>
-                <h4 className='text-center pt-2'>Dr. Zara</h4>
-              </div>
-
-              <div className='flex-col justify-center items-center'>
-                <FaCircle size={72} color='#777777'/>
-                <h4 className='text-center pt-2'>Hannah</h4>
-              </div>
-              
+        <div className='flex-col justify-center item-center w-full space-y-5 mb-28'>
+          <div className='space-y-3 w-full'>
+            <div className='flex justify-between items-center'>
+              <h6>Handpicked for you</h6>
+              <button className='font-medium text-[20px] text-blue'>
+                See All
+              </button>
             </div>
 
-            <button className='btn-blue'>
-              Ask the Experts
-            </button>
+            <div className='overflow-x-auto flex space-x-4 w-full'>
+              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Article #1</div>
+              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Book #1</div>
+              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Podcast #1</div>
+            </div>
+          </div>
+
+          <ParentOption title="Ask other parents"/> 
+          <ParentOption title="Ask the experts"/> 
+
+          <div className='space-y-3 w-full'>
+            <div className='flex justify-between items-center'>
+              <h6>Resources</h6>
+              <button className='font-medium text-[20px] text-blue'>
+                See All
+              </button>
+            </div>
+
+            <div className='overflow-x-auto flex space-x-4 w-full'>
+              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Articles</div>
+              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Videos</div>
+              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Podcasts</div>
+            </div>
           </div>
 
 
           <ParentOption title="Trending Topics"/>
-
-          <div className="border-t border-1.5 w-[344px] border-outline-gray "></div>
-
-          <ParentOption title="Other Resources"/>
+          <ParentOption title="Give us feedback"/>
         </div>
 
         <ParentNavbar home={true} insights={false}/>

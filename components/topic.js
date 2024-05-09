@@ -9,7 +9,7 @@ const Topic = ({title, started, route = '/parent/insights'}) => {
     };
 
     return (
-        <button className='flex items-center justify-between mx-2 w-full'
+        <button className='flex items-center justify-between px-2 w-full'
         onClick={handleClick}>
             <div className="flex jusitfy-center items-center space-x-4">
                 <div className={`rounded-full ${started? "bg-[#FFE6CE]": "bg-bar-gray"} p-2`}>

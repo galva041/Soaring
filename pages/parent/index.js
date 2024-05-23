@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { IoChevronBackOutline } from "react-icons/io5";
 import { RiHome2Line, RiSearchLine } from "react-icons/ri";
@@ -8,6 +9,13 @@ import { FaCircle } from "react-icons/fa";
 
 import ParentNavbar from '@/components/parentNavbar';
 import ParentOption from '@/components/parentOption';
+
+import articles from '@/public/resources/Articles.png'
+import videos from '@/public/resources/Videos.png'
+import podcasts from '@/public/resources/Podcasts.png'
+import goodInside from '@/public/resources/GoodInside.png'
+import tedTalk from '@/public/resources/TedTalk.png'
+import bebe from '@/public/resources/BringingUpBebe.png'
 
 
 export default function ParentHome() {
@@ -57,10 +65,22 @@ export default function ParentHome() {
               </button>
             </div>
 
-            <div className='overflow-x-auto flex space-x-4 w-full'>
-              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Article #1</div>
-              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Book #1</div>
-              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Podcast #1</div>
+            <div className='overflow-x-auto flex space-x-4 w-full pb-2'>
+              <Image
+              src={goodInside}
+              alt="goodinside"
+              className="object-cover h-36 w-36 rounded-lg"
+              />
+              <Image
+              src={bebe}
+              alt="bebe"
+              className="object-cover h-36 w-36 rounded-lg"
+              />
+              <Image
+              src={tedTalk}
+              alt="tedtalk"
+              className="object-cover h-36 w-36 rounded-lg"
+              />
             </div>
           </div>
 
@@ -75,15 +95,31 @@ export default function ParentHome() {
               </button>
             </div>
 
-            <div className='overflow-x-auto flex space-x-4 w-full'>
-              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Articles</div>
-              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Videos</div>
-              <div className='h-[144px] min-w-[144px] bg-blue rounded-lg flex justify-start items-end p-4'>Podcasts</div>
+            <div className='overflow-x-auto flex space-x-4 w-full pb-2'>
+              {/* <Link href='https://www.goodinside.com/podcast/all/' target='_blank'> */}
+                  <Image
+                  src={articles}
+                  alt="videos"
+                  width='100%'
+                  height='100%'
+                  className="object-cover h-36 w-36 rounded-lg"
+                  />
+              {/* </Link> */}
+              <Image
+              src={videos}
+              alt="videos"
+              className="object-cover h-36 w-36 rounded-lg"
+              />
+              <Image
+              src={podcasts}
+              alt="podcasts"
+              className="object-cover h-36 w-36 rounded-lg"
+              />
             </div>
           </div>
 
 
-          <ParentOption title="Trending Topics"/>
+          <ParentOption title="Trending topics"/>
           <ParentOption title="Give us feedback"/>
         </div>
 

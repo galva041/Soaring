@@ -7,7 +7,8 @@ import ParentNavbar from '@/components/parentNavbar';
 import Topic from '@/components/topic';
 import Week from '@/components/week';
 
-import badge from '@/public/badges/Badge.png'
+import badge from '@/public/badges/Badge.png';
+import confetti from '@/public/insights/KonoConfetti.png';
 
 
 export default function ParentInsights() {
@@ -23,7 +24,7 @@ export default function ParentInsights() {
 
   return (
     <main
-      className="relative bg-gray-blue h-fit w-screen pt-4 flex-col space-y-5"
+      className="relative flex flex-col z-0 bg-gray-blue h-fit w-screen pt-4 space-y-5"
     >
         <h5 className='self-start'>Child's Dashboard</h5> 
 
@@ -43,6 +44,14 @@ export default function ParentInsights() {
           className="object-contain"
           />
         </div>
+
+        {/* <div className='absolute transform -rotate-[26deg] top-80 left-80 z-10'>
+          <Image
+            src={confetti}
+            alt="confetti"
+            className="object-contain w-36 h-28"
+            /> 
+        </div> */}
 
         <h2 className="text-black text-[14px] font-medium">
           This week's earned badge was the Affirmation Badge. This activity focuses on... <span><button className='text-blue'>Show more</button></span>

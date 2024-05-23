@@ -3,13 +3,14 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 
 import { IoChevronBackOutline } from "react-icons/io5";
-import { RiHome2Line, RiSearchLine, RiArrowRightSLine } from "react-icons/ri";
-import { FaCircle } from "react-icons/fa";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 import ParentNavbar from '@/components/parentNavbar';
-import ParentOption from '@/components/parentOption';
 
-import badge from '@/public/badges/Badge.png'
+import badge from '@/public/badges/Badge.png';
+import mirror from '@/public/insights/ChildAffirmations.png';
+import childAff from '@/public/insights/KonoAffirmations.png';
+import kono2 from '@/public/insights/kono 2.png'
 
 
 export default function Confidence() {
@@ -37,7 +38,7 @@ export default function Confidence() {
                 <h2>3 of 4 badges earned</h2>
             </div>
             <div className='w-full h-6 bg-bar-gray rounded-full flex justify-between items-center'>
-                <div className="w-3/4 min-h-full bg-green rounded-l-full"></div> 
+                <div className="w-3/4 min-h-full bg-green rounded-l-full animate-load transform origin-left"></div> 
             </div>
         </div>
 
@@ -53,7 +54,7 @@ export default function Confidence() {
             <h2>This week your child earned the Affirmation Badge!</h2>
         </div>
 
-        <div className='flex justify-center items-center space-x-2 bg-white w-full p-4 rounded-lg drop-shadow-md my-7'>
+        <div className='flex justify-center items-center space-x-1 bg-white w-full p-4 rounded-lg drop-shadow-md my-7'>
             <div className='flex-col'>
                 <h2>Learn tips on speaking to your child about Confidence</h2>
                 <button className='bg-blue text-white font-semibold rounded-full px-4 py-2 text-[14px] mt-2'>
@@ -61,16 +62,23 @@ export default function Confidence() {
                 </button>
             </div>
 
-            <div className='min-h-[106px] min-w-[70px] bg-green rounded-full'></div>
+            <Image 
+            src={kono2}
+            alt='kono2'
+            className='object-cover h-[80px] w-[75px]'/>
         </div>
 
         <h6 className='self-start mb-6'>Responses to the activity</h6>
 
         <div className='flex flex-col space-y-5 pb-24 w-full'>
-            <div className='flex justify-between items-center w-full space-x-5 bg-white rounded-lg drop-shadow-md h-[104px] pr-4'>
+            <div className='flex justify-between items-center w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'>
                 <div className='flex justify-center items-center space-x-4'>
-                    <div className='min-w-[100px] h-[104px] rounded-lg bg-[#a9d0f0] flex justify-center items-center'></div> 
-                    <h2>
+                    <Image
+                    src={mirror}
+                    alt="mirror"
+                    className="object-cover h-[104px] w-[104px] rounded-lg"
+                    />
+                    <h2 className='text-[14px]'>
                         Your child’s affirmations for themselves
                     </h2>
                 </div>
@@ -78,10 +86,14 @@ export default function Confidence() {
                 <RiArrowRightSLine size={24} color="#313131"/>
             </div>
 
-            <div className='flex justify-between items-center w-full space-x-5 bg-white rounded-lg drop-shadow-md h-[104px] pr-4'>
+            <div className='flex justify-between items-center w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'>
                 <div className='flex justify-center items-center space-x-4'>
-                    <div className='min-w-[100px] h-[104px] rounded-lg bg-[#cce7be] flex justify-center items-center'></div> 
-                    <h2>
+                    <Image
+                    src={childAff}
+                    alt="childaff"
+                    className="object-cover h-[104px] w-[104px] rounded-lg"
+                    />
+                    <h2 className='text-[14px]'>
                         Your child’s affirmations for Kono
                     </h2>
                 </div>

@@ -16,6 +16,10 @@ module.exports = {
           '0%, 100%': { transform: 'scale(0.9)' },
           '50%': { transform: 'scale(1)' },
         },
+        'load': {
+          '0%': { transform: 'scaleX(0.2)' },
+          '100%': { transform: 'scaleX(1)' }, 
+        }
       },
       colors: {
         'green': '#00C49A',
@@ -38,6 +42,7 @@ module.exports = {
       animation: {
         wave: 'wave 1s ease-in infinite',
         'grow-shrink': 'grow-shrink 5s infinite',
+        'load': 'load 1.5s'
       }
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

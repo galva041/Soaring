@@ -1,11 +1,10 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image';
 
-import listening from '@/public/parent/listeningCorner.png'
-import reading from '@/public/parent/readingCorner.png'
-import askother from '@/public/parent/askOtherParents.png'
-import trending from '@/public/parent/trendingTopics.png'
-import other from '@/public/parent/otherResources.png'
+import feedback from '@/public/parent/GiveUsFeedback.png'
+import askExperts from '@/public/parent/AskTheExperts.png'
+import trending from '@/public/parent/TrendingTopics1.png'
+import askParents from '@/public/parent/AskOtherParents1.png'
 
 const ParentOption = ({title}) => {
     const router = useRouter();
@@ -21,14 +20,14 @@ const ParentOption = ({title}) => {
     return (
         <div className='flex-col space-y-3'>
           <h6>{title}</h6>
-          {/* <Image
+          <Image
             alt="listening corner"
-            src={title == "Listening Corner"? listening: title == "Reading Corner"? reading : title == "Ask Other Parents"? askother : title == "Trending Topics"? trending: other} 
+            src={title == "Ask other parents"? askParents : title == "Ask the experts"? askExperts : title == "Trending topics"? trending: feedback} 
             width='100%'
             height='100%'
-            className="object-cover h-[144px] w-[344px] self-center rounded-md"
-          />  */}
-          <div className='w-full h-[144px] bg-leaf-green rounded-lg'></div>
+            className="object-cover self-center rounded-lg"
+          /> 
+          {/* <div className='w-full h-[144px] bg-leaf-green rounded-lg'></div> */}
           
         </div> 
     )

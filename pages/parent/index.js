@@ -66,26 +66,32 @@ export default function ParentHome() {
             </div>
 
             <div className='overflow-x-auto flex space-x-4 w-full pb-2'>
-              <Image
-              src={goodInside}
-              alt="goodinside"
-              className="object-cover h-36 w-36 rounded-lg"
-              />
-              <Image
-              src={bebe}
-              alt="bebe"
-              className="object-cover h-36 w-36 rounded-lg"
-              />
-              <Image
-              src={tedTalk}
-              alt="tedtalk"
-              className="object-cover h-36 w-36 rounded-lg"
-              />
+              <Link href='https://www.goodinside.com/podcast/all/' target='_blank' className='flex-shrink-0'>
+                <Image
+                src={goodInside}
+                alt="goodinside"
+                className="object-cover h-36 w-36 rounded-lg "
+                />
+              </Link>
+              <Link href='https://pameladruckerman.com/bringing-up-bebe/' target='_blank' className='flex-shrink-0'>
+                <Image
+                src={bebe}
+                alt="bebe"
+                className="object-cover h-36 w-36 rounded-lg"
+                />
+              </Link>
+              <Link href='https://www.youtube.com/watch?v=CyElHdaqkjo&ab_channel=TED' target='_blank' className='flex-shrink-0'>
+                <Image
+                src={tedTalk}
+                alt="tedtalk"
+                className="object-cover h-36 w-36 rounded-lg"
+                />
+              </Link>
             </div>
           </div>
 
-          <ParentOption title="Ask other parents"/> 
-          <ParentOption title="Ask the experts"/> 
+          <ParentOption title="Ask other parents" link={0}/> 
+          <ParentOption title="Ask the experts" link={0}/> 
 
           <div className='space-y-3 w-full'>
             <div className='flex justify-between items-center'>
@@ -96,7 +102,6 @@ export default function ParentHome() {
             </div>
 
             <div className='overflow-x-auto flex space-x-4 w-full pb-2'>
-              {/* <Link href='https://www.goodinside.com/podcast/all/' target='_blank'> */}
                   <Image
                   src={articles}
                   alt="videos"
@@ -104,7 +109,6 @@ export default function ParentHome() {
                   height='100%'
                   className="object-cover h-36 w-36 rounded-lg"
                   />
-              {/* </Link> */}
               <Image
               src={videos}
               alt="videos"

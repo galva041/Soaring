@@ -19,6 +19,10 @@ module.exports = {
         'load': {
           '0%': { transform: 'scaleX(0.2)' },
           '100%': { transform: 'scaleX(1)' }, 
+        },
+        'fly-in': {
+          '0%': { transform: 'translate(100px, 100px) scale(0.6)' },
+          '100%': { transform: 'translate(0px, 0px)' },
         }
       },
       colors: {
@@ -42,7 +46,8 @@ module.exports = {
       animation: {
         wave: 'wave 1s ease-in infinite',
         'grow-shrink': 'grow-shrink 5s infinite',
-        'load': 'load 1.5s'
+        'load': 'load 1.5s',
+        'fly-in': 'fly-in 1.1s',
       }
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

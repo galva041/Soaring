@@ -24,20 +24,20 @@ export default function ParentInsights() {
 
   return (
     <main
-      className="relative flex flex-col z-0 bg-gray-blue h-fit w-screen pt-4 space-y-5"
+      className="relative flex flex-col z-0 bg-gray-blue h-fit w-screen pt-4 space-y-5 overflow-hidden"
     >
-        <h5 className='self-start'>Child's Dashboard</h5> 
+        <h5 className='self-start z-0'>Child's Dashboard</h5> 
 
-        <div className='flex justify-center items-center space-x-3 bg-white p-4 rounded-lg drop-shadow-md'>
+        <div className='flex justify-center items-center space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'>
             <RiLightbulbLine size={32} color="#F0B23E"/> 
             <h7 className="text-black text-[14px] font-medium" >
                 The last activity your child completed was on <span className='font-semibold'>Confidence</span>.
             </h7>
         </div>
 
-        <h6 className='self-start'>This Week's Progress</h6>
+        <h6 className='self-start z-0'>This Week's Progress</h6>
 
-        <div className='mt-5 h-min w-3/5 sm:w-1/2 md:w-1/3 xl:w-1/4 animate-grow-shrink'>
+        <div className='mt-5 h-min w-3/5 sm:w-1/2 md:w-1/3 xl:w-1/4 animate-grow-shrink z-0'>
           <Image
           src={badge}
           alt="badge"
@@ -45,19 +45,19 @@ export default function ParentInsights() {
           />
         </div>
 
-        {/* <div className='absolute transform -rotate-[26deg] top-80 left-80 z-10'>
-          <Image
-            src={confetti}
-            alt="confetti"
-            className="object-contain w-36 h-28"
-            /> 
-        </div> */}
+        <div className='animate-fly-in absolute transform z-10 -right-12 top-[13%]'>
+        <Image
+        src={confetti}
+        alt="confetti"
+        className="object-contain w-40 h-auto -rotate-[30deg]"
+        /> 
+        </div>
 
-        <h2 className="text-black text-[14px] font-medium">
+        <h2 className="text-black text-[14px] font-medium z-0">
           This week's earned badge was the Affirmation Badge. This activity focuses on... <span><button className='text-blue'>Show more</button></span>
         </h2>
 
-        <div className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md'>
+        <div className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'>
           <div className='flex justify-center items-center space-x-3'>
             <div className='w-[35px] h-[35px] bg-[#5582AC] rounded-full flex justify-center items-center'>✨</div> 
             <h2>
@@ -68,7 +68,7 @@ export default function ParentInsights() {
           <RiArrowRightSLine size={24} color="#313131"/>
         </div>
 
-        <div className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md'>
+        <div className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'>
           <div className='flex justify-center items-center space-x-3'>
             <div className='w-[35px] h-[35px] bg-[#FEF3C6] rounded-full flex justify-center items-center'>🎉</div> 
             <h2>
@@ -79,8 +79,8 @@ export default function ParentInsights() {
           <RiArrowRightSLine size={24} color="#313131"/>
         </div>
 
-        <div className='flex justify-between items-center w-full'>
-          <div className='bg-white rounded-lg h-[134px] w-[164px] flex flex-col justify-center items-start p-4 drop-shadow-md'>
+        <div className='flex justify-between items-center w-full z-0 space-x-3'>
+          <div className='bg-white rounded-lg h-[134px] w-[164px] sm:w-[50%] flex flex-col justify-center items-start p-4 drop-shadow-md'>
             <div className='flex'>
               <h2>Average Screen Time</h2>
 
@@ -94,7 +94,7 @@ export default function ParentInsights() {
             </h7>
           </div>
 
-          <div className='bg-white rounded-lg h-[134px] w-[164px] flex flex-col justify-center items-start p-4 drop-shadow-md'>
+          <div className='bg-white rounded-lg h-[134px] w-[164px] sm:w-[50%] flex flex-col justify-center items-start p-4 drop-shadow-md z-0'>
             <div className='flex'>
               <h2>Badges Earned</h2>
               <div className='h-[28px] min-w-[28px] bg-pink rounded-full flex justify-center items-center'>
@@ -108,12 +108,12 @@ export default function ParentInsights() {
           </div>
         </div>
 
-        <div className='bg-white p-4 rounded-lg w-full drop-shadow-md space-y-1.5'> 
+        <div className='bg-white p-4 rounded-lg w-full drop-shadow-md space-y-1.5 z-0'> 
           <h2>Weekly Activity Tracker</h2>
           <Week />
         </div>
 
-        <div className='bg-white p-4 rounded-lg w-full drop-shadow-md'>
+        <div className='bg-white p-4 rounded-lg w-full drop-shadow-md z-0'>
           <h2>Weekly Goal Progress</h2>
           <div className='flex justify-between items-center space-x-3'>
             <div className="w-full h-[8px] bg-bar-gray rounded-full flex justify-between items-center">
@@ -149,7 +149,7 @@ export default function ParentInsights() {
             </div>
         </div> */}
 
-        <div className='flex justify-between w-full'>
+        <div className='flex justify-between w-full z-0'>
           <h6 className='self-start'>Topics</h6>
 
           <button className='flex justify-center items-center space-x-1'>
@@ -159,7 +159,7 @@ export default function ParentInsights() {
           </button>
         </div>
 
-        <div className='w-full space-y-4 pb-24'>
+        <div className='w-full space-y-4 pb-24 z-0'>
           <Topic title="Confidence" started={true} route='/parent/insights/confidence'/>
           <div className="w-full border-t-2 border-[#D2D2D2]"></div>
           <Topic title="Resilience" started={false}/>

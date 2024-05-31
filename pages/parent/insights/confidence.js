@@ -20,6 +20,10 @@ export default function Confidence() {
 
   const router = useRouter();
 
+  const navToUnderConst = () => {
+    router.push('/parent/UnderConstruction');
+  };
+
   return (
     <main
       className="relative bg-gray-blue w-screen h-fit pt-4"
@@ -57,7 +61,8 @@ export default function Confidence() {
         <div className='flex justify-center items-center space-x-1 bg-white w-full p-4 rounded-lg drop-shadow-md my-7'>
             <div className='flex-col'>
                 <h2>Learn tips on speaking to your child about Confidence</h2>
-                <button className='bg-blue text-white font-semibold rounded-full px-4 py-2 text-[14px] mt-2'>
+                <button className='bg-blue text-white font-semibold rounded-full px-4 py-2 text-[14px] mt-2'
+                onClick={navToUnderConst}>
                     Learn More
                 </button>
             </div>
@@ -65,13 +70,14 @@ export default function Confidence() {
             <Image 
             src={kono2}
             alt='kono2'
-            className='object-cover h-[80px] w-[75px]'/>
+            className='object-contain h-[80px] w-[75px]'/>
         </div>
 
         <h6 className='self-start mb-6'>Responses to the activity</h6>
 
         <div className='flex flex-col space-y-5 pb-24 w-full'>
-            <div className='flex justify-between items-center w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'>
+            <button className='flex justify-between items-center text-left w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'
+            onClick={navToUnderConst}>
                 <div className='flex justify-center items-center space-x-4'>
                     <Image
                     src={mirror}
@@ -84,9 +90,10 @@ export default function Confidence() {
                 </div>
 
                 <RiArrowRightSLine size={24} color="#313131"/>
-            </div>
+            </button>
 
-            <div className='flex justify-between items-center w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'>
+            <button className='flex justify-between items-center text-start w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'
+            onClick={navToUnderConst}>
                 <div className='flex justify-center items-center space-x-4'>
                     <Image
                     src={childAff}
@@ -99,7 +106,7 @@ export default function Confidence() {
                 </div>
 
                 <RiArrowRightSLine size={24} color="#313131"/>
-            </div>
+            </button>
         </div> 
 
         <ParentNavbar home={true} insights={false}/>

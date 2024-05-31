@@ -23,6 +23,11 @@ module.exports = {
         'fly-in': {
           '0%': { transform: 'translate(100px, 100px) scale(0.6)' },
           '100%': { transform: 'translate(0px, 0px)' },
+        },
+        'focus': {
+          '0%': { transform: 'scale(0.9)' },
+          '50%': { transform: 'scale(0.8)' },
+          '100%': { transform: 'scale(1)' },
         }
       },
       colors: {

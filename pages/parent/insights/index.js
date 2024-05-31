@@ -16,11 +16,11 @@ export default function ParentInsights() {
     document.querySelector('meta[name="theme-color"]').setAttribute('content', '#EBF3FA');
   }, []);
 
-//   const router = useRouter();
+  const router = useRouter();
 
-//   const handleClick = () => {
-//     router.push('/map?cloud=0');
-//   };
+  const navToUnderConst = () => {
+    router.push('/parent/UnderConstruction');
+  };
 
   return (
     <main
@@ -57,7 +57,8 @@ export default function ParentInsights() {
           This week's earned badge was the Affirmation Badge. This activity focuses on... <span><button className='text-blue'>Show more</button></span>
         </h2>
 
-        <div className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'>
+        <button className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'
+        onClick={navToUnderConst}>
           <div className='flex justify-center items-center space-x-3'>
             <div className='w-[35px] h-[35px] bg-[#5582AC] rounded-full flex justify-center items-center'>✨</div> 
             <h2>
@@ -66,9 +67,10 @@ export default function ParentInsights() {
           </div>
 
           <RiArrowRightSLine size={24} color="#313131"/>
-        </div>
+        </button>
 
-        <div className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'>
+        <button className='flex justify-between items-center w-full space-x-3 bg-white p-4 rounded-lg drop-shadow-md z-0'
+        onClick={navToUnderConst}>
           <div className='flex justify-center items-center space-x-3'>
             <div className='w-[35px] h-[35px] bg-[#FEF3C6] rounded-full flex justify-center items-center'>🎉</div> 
             <h2>
@@ -77,7 +79,7 @@ export default function ParentInsights() {
           </div>
 
           <RiArrowRightSLine size={24} color="#313131"/>
-        </div>
+        </button>
 
         <div className='flex justify-between items-center w-full z-0 space-x-3'>
           <div className='bg-white rounded-lg h-[134px] w-[164px] sm:w-[50%] flex flex-col justify-center items-start p-4 drop-shadow-md'>

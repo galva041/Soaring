@@ -7,7 +7,7 @@ import askExperts from '@/public/parent/AskTheExperts.png'
 import trending from '@/public/parent/TrendingTopics1.png'
 import askParents from '@/public/parent/AskOtherParents1.png'
 
-const ParentOption = ({title, link}) => {
+const ParentOption = ({title, link = 1}) => {
     const router = useRouter();
 
     const navToParentHome = () => {
@@ -18,12 +18,12 @@ const ParentOption = ({title, link}) => {
         router.push('/parent/parentInsights');
     };
 
-    var links = ['https://www.facebook.com/groups/712184407466396',''];
+    var links = ['https://www.facebook.com/groups/712184407466396','/parent/UnderConstruction'];
     
     return (
         <div className='flex-col space-y-3'>
           <h6>{title}</h6>
-          {/* <Link href={links[link]} target='_blank' className='flex-shrink-0' passHref>  */}
+          <Link href={links[link]} target={link < 1? '_blank' : null} className='flex-shrink-0'> 
             <Image
             alt="listening corner"
             src={title == "Ask other parents"? askParents : title == "Ask the experts"? askExperts : title == "Trending topics"? trending: feedback} 
@@ -31,7 +31,7 @@ const ParentOption = ({title, link}) => {
             height='100%'
             className="object-contain self-center rounded-lg h-36 w-auto"
             /> 
-          {/* </Link> */}
+          </Link>
         </div> 
     )
 };

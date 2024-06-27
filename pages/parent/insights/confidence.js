@@ -34,9 +34,11 @@ export default function Confidence() {
             </button>
         </div>
 
-        <h5 className='self-start my-4'>Confidence</h5> 
+        <div className='sm:w-[490px]'>
+            <h5 className='self-start my-4'>Confidence</h5> 
+        </div>
 
-        <div className='w-full mb-7 space-y-1'>
+        <div className='w-full sm:w-[490px] mb-7 space-y-1'>
             <div className='flex justify-between w-full px-1'>
                 <h2>Progress</h2>
                 <h2>3 of 4 badges earned</h2>
@@ -46,7 +48,7 @@ export default function Confidence() {
             </div>
         </div>
 
-        <div className='flex justify-center items-center space-x-4 bg-white p-4 rounded-lg drop-shadow-md'>
+        <div className='flex justify-center items-center space-x-4 bg-white p-4 rounded-lg drop-shadow-md sm:w-[490px]'>
             <div className='h-min w-2/5 md:w-1/6'>
                 <Image
                 src={badge}
@@ -58,7 +60,7 @@ export default function Confidence() {
             <h2>This week your child earned the Affirmation Badge!</h2>
         </div>
 
-        <div className='flex justify-center items-center space-x-1 bg-white w-full p-4 rounded-lg drop-shadow-md my-7'>
+        <div className='flex justify-center items-center space-x-1 bg-white w-full sm:w-[490px] p-4 rounded-lg drop-shadow-md my-7'>
             <div className='flex-col'>
                 <h2>Learn tips on speaking to your child about Confidence</h2>
                 <button className='bg-blue text-white font-semibold rounded-full px-4 py-2 text-[14px] mt-2'
@@ -72,10 +74,12 @@ export default function Confidence() {
             alt='kono2'
             className='object-contain h-[80px] w-[75px]'/>
         </div>
+        
+        <div className='sm:w-[490px]'>
+            <h6 className='self-start mb-6'>Responses to the activity</h6>
+        </div>
 
-        <h6 className='self-start mb-6'>Responses to the activity</h6>
-
-        <div className='flex flex-col space-y-5 pb-24 w-full'>
+        <div className='flex flex-col space-y-5 pb-24 w-full sm:w-[490px]'>
             <button className='flex justify-between items-center text-left w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'
             onClick={navToUnderConst}>
                 <div className='flex justify-center items-center space-x-4'>
@@ -92,7 +96,7 @@ export default function Confidence() {
                 <RiArrowRightSLine size={24} color="#313131"/>
             </button>
 
-            <button className='flex justify-between items-center text-start w-full bg-white rounded-lg drop-shadow-md h-[104px] pr-4'
+            <button className='flex justify-between items-center text-start w-full sm:w-[490px] bg-white rounded-lg drop-shadow-md h-[104px] pr-4'
             onClick={navToUnderConst}>
                 <div className='flex justify-center items-center space-x-4'>
                     <Image

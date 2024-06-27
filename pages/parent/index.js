@@ -47,7 +47,7 @@ export default function ParentHome() {
         </button>
       </div>
 
-      <div className='flex items-center justify-between w-full mt-3 mb-5'>
+      <div className='flex items-center justify-between w-full sm:w-[490px] mt-3 mb-5'>
         <div> 
           <div className='flex items-center space-x-2'>
             <h5>
@@ -60,7 +60,7 @@ export default function ParentHome() {
         <RiSearchLine size={28} color='#313131'/>
       </div>
 
-      <div className='flex-col justify-center item-center w-full space-y-5 mb-28'>
+      <div className='flex-col justify-center item-center w-full sm:w-[490px] space-y-5 mb-28'>
         <div className='space-y-3 w-full'>
           <div className='flex justify-between items-center'>
             <h6>Handpicked for you</h6>
@@ -74,28 +74,28 @@ export default function ParentHome() {
               <Image
               src={goodInside}
               alt="goodinside"
-              className="object-cover h-36 w-36 rounded-lg animate-[focus_1.4s_ease-in-out]"
+              className="object-cover h-36 w-auto sm:h-48 rounded-lg animate-[focus_1.4s_ease-in-out]"
               />
             </Link>
             <Link href='https://pameladruckerman.com/bringing-up-bebe/' target='_blank' className='flex-shrink-0'>
               <Image
               src={bebe}
               alt="bebe"
-              className="object-cover h-36 w-36 rounded-lg"
+              className="object-cover h-36 w-auto sm:h-48 rounded-lg"
               />
             </Link>
             <Link href='https://www.youtube.com/watch?v=CyElHdaqkjo&ab_channel=TED' target='_blank' className='flex-shrink-0'>
               <Image
               src={tedTalk}
               alt="tedtalk"
-              className="object-cover h-36 w-36 rounded-lg"
+              className="object-cover h-36 w-auto sm:h-48 rounded-lg"
               />
             </Link>
           </div>
         </div>
 
         <ParentOption title="Ask other parents" link={0}/> 
-        <ParentOption title="Ask the experts" link={1}/> 
+        <ParentOption title="Ask the experts" link={2}/> 
 
         <div className='space-y-3 w-full'>
           <div className='flex justify-between items-center'>
@@ -112,21 +112,21 @@ export default function ParentHome() {
               alt="videos"
               width='100%'
               height='100%'
-              className="object-cover h-36 w-36 rounded-lg"
+              className="object-cover h-36 w-auto sm:h-48 rounded-lg"
               />
             </button>
             <button onClick={navToUnderConst} className='flex-shrink-0'>
               <Image
               src={videos}
               alt="videos"
-              className="object-cover h-36 w-36 rounded-lg"
+              className="object-cover h-36 w-auto sm:h-48 rounded-lg"
               />
             </button>
             <button onClick={navToUnderConst} className='flex-shrink-0'>
               <Image
               src={podcasts}
               alt="podcasts"
-              className="object-cover h-36 w-36 rounded-lg"
+              className="object-cover h-36 w-auto sm:h-48 rounded-lg"
               />
             </button>
           </div>
@@ -134,7 +134,7 @@ export default function ParentHome() {
 
 
         <ParentOption title="Trending topics" link={1}/>
-        <ParentOption title="Give us feedback" link={1}/>
+        <ParentOption title="Give us feedback" link={3}/>
       </div>
 
       <ParentNavbar home={true} insights={false}/>

@@ -25,8 +25,8 @@ module.exports = {
           '100%': { transform: 'translate(0px, 0px)' },
         },
         'focus': {
-          '0%': { transform: 'scale(0.9)' },
-          '50%': { transform: 'scale(0.8)' },
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.9)' },
           '100%': { transform: 'scale(1)' },
         }
       },

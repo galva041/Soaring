@@ -60,6 +60,10 @@
   label {
     @apply text-black text-[18px] font-semibold
   }
+
+  button:active {
+    @apply opacity-70
+  }
 }
 
 @layer components {

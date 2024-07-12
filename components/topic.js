@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { RiRefreshLine, RiArrowRightSLine, RiLockLine } from "react-icons/ri";
 
-const Topic = ({title, started, route = '/parent/insights'}) => {
+const Topic = ({title, started, route = '/parent/insights?firstLoad=N'}) => {
     const router = useRouter();
 
     const handleClick = () => {

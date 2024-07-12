@@ -46,7 +46,7 @@ export default function ChildOrParent() {
                 <h1 className='text-[16px] font-semibold text-white'>I'm a child</h1>
             </button>
 
-            <button className='btn-blue space-x-2.5 flex items-center' onClick={() => router.push('/parent')}>
+            <button className='btn-blue space-x-2.5 flex items-center' onClick={() => router.push('/parent?firstLoad=Y')}>
                 <RiParentLine size={24} color='#FFFFFF'/>
                 <h1 className='text-[16px] font-semibold text-white'>I'm a parent</h1>
             </button>

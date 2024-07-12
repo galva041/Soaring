@@ -4,18 +4,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { IoChevronBackOutline } from "react-icons/io5";
-import { RiHome2Line, RiSearchLine } from "react-icons/ri";
+import { RiHome2Line, RiSearchLine, RiLineChartLine, RiArrowRightSLine, RiCloseLine } from "react-icons/ri";
 import { FaCircle } from "react-icons/fa";
 
 import ParentNavbar from '@/components/parentNavbar';
 import ParentOption from '@/components/parentOption';
 
-import articles from '@/public/resources/Articles.png'
-import videos from '@/public/resources/Videos.png'
-import podcasts from '@/public/resources/Podcasts.png'
-import goodInside from '@/public/resources/GoodInside.png'
-import tedTalk from '@/public/resources/TedTalk.png'
-import bebe from '@/public/resources/BringingUpBebe.png'
+import articles from '@/public/resources/Articles.png';
+import videos from '@/public/resources/Videos.png';
+import podcasts from '@/public/resources/Podcasts.png';
+import goodInside from '@/public/resources/GoodInside.png';
+import tedTalk from '@/public/resources/TedTalk.png';
+import bebe from '@/public/resources/BringingUpBebe.png';
+import insightsPopUp from '@/public/parent/InsightsPopUp.png';
 
 
 export default function ParentHome() {
@@ -25,12 +26,20 @@ export default function ParentHome() {
 
   const router = useRouter();
 
-  const handleClick = () => {
-    router.push('/map?cloud=0');
-  };
+  var { firstLoad } = router.query;
+
+  const [isPopupVisible, setIsPopupVisible] = useState(firstLoad === 'Y');
 
   const navToUnderConst = () => {
     router.push('/parent/UnderConstruction');
+  };
+
+  const navToInsights = () => {
+    router.push('parent/insights/');
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
   };
 
   return (
@@ -59,6 +68,15 @@ export default function ParentHome() {
 
         <RiSearchLine size={28} color='#313131'/>
       </div>
+
+      <button className='flex items-center justify-between bg-white p-4 w-full sm:w-[490px] rounded-lg drop-shadow-md mb-6'
+      onClick={navToInsights}>
+        <RiLineChartLine className="text-5xl sm:text-4xl text-[#4EAC5E]"/> 
+        <h7 className="text-black text-[14px] font-medium pl-1.5 text-start" >
+            Your child’s weekly insights report is ready to view!
+        </h7>
+        <RiArrowRightSLine className="text-4xl sm:text-3xl text-[#313131]"/>
+      </button>
 
       <div className='flex-col justify-center item-center w-full sm:w-[490px] space-y-5 mb-28'>
         <div className='space-y-3 w-full'>
@@ -138,6 +156,32 @@ export default function ParentHome() {
       </div>
 
       <ParentNavbar home={true} insights={false}/>
+
+      {isPopupVisible && (
+        <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-10 z-10'>
+          <div className='relative flex flex-col items-center justify-center bg-white mx-8 sm:w-[450px] px-6 rounded-xl space-y-4 pb-8 pt-4 animate-[focus_1.4s]'>
+            <button className="btn-nav self-end"
+            onClick={handleClosePopup}>
+              <RiCloseLine size={28} color="#0978D5"/>
+            </button>
+
+            <Image
+              src={insightsPopUp}
+              alt="insights"
+              width='100%'
+              height='100%'
+              className="object-cover h-36 w-auto sm:h-48"
+            />
+
+            <h7 className="text-black text-[17px] font-medium px-1 sm:py-1.5 text-center" >
+              Your child’s weekly insights are ready! Would you like to view them now?
+            </h7>
+            
+            <button className='btn-blue' onClick={navToInsights}>View Now</button>
+            <button className='btn-transparent' onClick={handleClosePopup}>Maybe Later</button>
+          </div>
+        </div>
+      )}
     </main>
   )
 }

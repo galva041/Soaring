@@ -95,6 +95,14 @@
     @apply text-black text-[16px] font-semibold border-2 border-outline-gray py-1.5 rounded-full w-full
   }
 
+  .post-info {
+    @apply font-medium text-[10px] text-txt-gray
+  }
+
+  .post-text {
+    @apply font-medium text-[12px] text-black
+  }
+
   /* .btn-gray:hover {
     @apply text-blue border-blue
   } */
@@ -109,6 +117,18 @@
 
   .btn-define {
     @apply text-blue underline cursor-pointer
+  }
+
+  .btn-filter {
+    @apply flex justify-center items-center font-medium text-[14px] px-5 py-1.5 rounded-full min-w-fit
+  }
+
+  .btn-post-pick {
+    @apply font-medium text-[14px] text-white bg-blue rounded-full min-w-fit px-5 py-1.5
+  }
+
+  .btn-not-pick {
+    @apply font-medium text-[14px] text-blue bg-transparent rounded-full min-w-fit border-2 border-blue px-5 py-1.5
   }
 }
 

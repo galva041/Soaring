@@ -18,12 +18,12 @@ const ParentOption = ({title, link = 1}) => {
         router.push('/parent/parentInsights');
     };
 
-    var links = ['https://www.facebook.com/groups/712184407466396','/parent/UnderConstruction','https://forms.gle/zL8U4k4Nj9k75syn8','https://forms.gle/vwYT6epMgrC13mYdA'];
+    var links = ['https://www.facebook.com/groups/712184407466396','/parent/UnderConstruction','https://forms.gle/zL8U4k4Nj9k75syn8','https://forms.gle/vwYT6epMgrC13mYdA','/parent/AskOtherParents'];
     
     return (
         <div className='flex-col space-y-3'>
           <h6>{title}</h6>
-          <Link href={links[link]} target={link !== 1? '_blank' : null} className='w-min'> 
+          <Link href={links[link]} target={link === 1 || link === 4? null : '_blank'} className='w-min'> 
             <Image
             alt="listening corner"
             src={title == "Ask other parents"? askParents : title == "Ask the experts"? askExperts : title == "Trending topics"? trending: feedback} 

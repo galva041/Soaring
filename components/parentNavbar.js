@@ -9,7 +9,7 @@ const ParentNavbar = (home, insights, locked = true) => {
     };
 
     const navToParentInsights = () => {
-        router.push('/parent/insights');
+        router.push('/parent/insights?firstLoad=N');
     };
 
     const navToUnderConst = () => {

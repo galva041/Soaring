@@ -112,7 +112,7 @@ export default function ParentHome() {
           </div>
         </div>
 
-        <ParentOption title="Ask other parents" link={0}/> 
+        <ParentOption title="Ask other parents" link={4}/> 
         <ParentOption title="Ask the experts" link={2}/> 
 
         <div className='space-y-3 w-full'>

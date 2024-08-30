@@ -11,10 +11,9 @@ import ParentNavbar from '@/components/parentNavbar';
 
 import DiscussAnyTopic from '@/public/parent/forum/DiscussAnyTopic.png';
 import BuildingBodyConfidence from '@/public/parent/forum/BuildingBodyConfidence.png';
-import FriendshipFallout from '@/public/parent/forum/FriendshipFallout.png';
+import FriendshipFallout from '@/public/parent/forum/FriendshipFallOut.png';
 import HandlingBullying from '@/public/parent/forum/HandlingBullying.png';
 import PersonalSpace from '@/public/parent/forum/PersonalSpace.png';
-
 
 export default function AskOtherParents() {
     useEffect(() => {

@@ -49,7 +49,7 @@ const AnsPopUp = ({currPage}) => {
     var [corAns, setCor] = useState(false);
     
     return (
-        <div className="w-screen px-6 ">
+        <div className="w-full sm:w-[490px]">
             {currPage === "Connie01" ? 
                 <div className='grid grid-flow-row gap-3 w-full mb-4 z-0 relative'>
                     <button className='btn-gray' onClick={() => {setInc(true); playIncorrect();}}>Trees are green.</button>

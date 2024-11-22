@@ -2,12 +2,25 @@ import { useState } from "react";
 import { useRouter } from 'next/router';
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-const CorrectFillInBlank = () => {
+const CorrectFillInBlank = ({lesson, pet, accessory, power, name}) => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/break?breakNum=6');
+        if (lesson === "1") {
+            router.push('/break?breakNum=6');
+        } else {
+            router.push(`/perfectNurturer/break?pet=${pet}&accessory=${accessory}&power=${power}&name=${name}`);
+        } 
     };
+
+    switch(lesson) {
+        case "1":
+            var message = "Be sure to continue reminding yourself and others how great you are and spread the positivity!";
+            break;
+        case "2":
+            var message = "Spreading kindess helps uplift those around us";
+            break;
+    }
     
     return (
         <div className="h-full w-screen flex flex-col justify-end items-end z-3 absolute top-0 left-0 bg-black bg-opacity-25">
@@ -17,7 +30,7 @@ const CorrectFillInBlank = () => {
                 </h3>
 
                 <h2 className="mt-2.5 mb-6">
-                    Be sure to continue reminding yourself and others how great you are and spread the positivity!
+                    {message}
                 </h2>
 
                 <button className="btn-blue" onClick={handleClick}>

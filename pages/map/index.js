@@ -13,7 +13,9 @@ export default function Map() {
   var { cloud } = router.query;
 
   var totalBadges = 0;
-  var nextLessonLocked = true;
+  var firstLessonLocked = false;
+  var secondLessonLocked = true;
+  var thirdLessonLocked = true;
   var greenBounce = 'Start Here';
   var greenBounceLoc = '-top-[27%] right-[20%]';
   var greenPointLoc = 'left-8';
@@ -21,16 +23,29 @@ export default function Map() {
   switch (cloud) {
     case "0":
       totalBadges = 0;
-      nextLessonLocked = true;
+      firstLessonLocked = false;
+      secondLessonLocked = true;
+      thirdLessonLocked = true;
       greenBounce = 'Start Here';
-      greenBounceLoc = '-top-[27%] right-[20%]';
+      greenBounceLoc = '-top-[28%] sm:-top-[27%] right-[20%]';
       greenPointLoc = 'left-8';
       break;
     case "1": 
       totalBadges = 1;
-      nextLessonLocked = false;
+      firstLessonLocked = false;
+      secondLessonLocked = false;
+      thirdLessonLocked = true;
       greenBounce = 'You are here';
-      greenBounceLoc = '-top-[40%] left-[20%]';
+      greenBounceLoc = '-top-[44%] sm:-top-[40%] left-[20%]';
+      greenPointLoc = 'left-9';
+      break;
+    case "2": 
+      totalBadges = 2;
+      firstLessonLocked = false;
+      secondLessonLocked = false;
+      thirdLessonLocked = false;
+      greenBounce = 'You are here';
+      greenBounceLoc = '-top-[58%] sm:-top-[50%] right-[20%]';
       greenPointLoc = 'left-9';
       break;
   }
@@ -69,10 +84,10 @@ export default function Map() {
 
       <CloudButton lesson="Our Positivity" t='top-[0%]' l='left-[20%]'/>
       
-      <CloudButton lesson="My Hero" t='-top-[7%]' l='right-[20%]'/>
-      <CloudButton lesson="My Amazing Mind" route="uhoh" locked={nextLessonLocked} t='-top-[15%]' l='left-[20%]'/>
+      <CloudButton lesson="My Hero" route="uhoh" complete={!thirdLessonLocked} locked={thirdLessonLocked} t='-top-[7%]' l='right-[20%]'/>
+      <CloudButton lesson="Perfect Nurturer" route="perfectNurturer?content=0" complete={thirdLessonLocked} locked={secondLessonLocked} t='-top-[15%]' l='left-[20%]'/>
 
-      <CloudButton lesson="Meet Kono" route="connie00" complete={!nextLessonLocked} locked={false} t='-top-[22%]' l='right-[20%]'/>
+      <CloudButton lesson="Meet Kono" route="connie00" complete={secondLessonLocked} locked={false} t='-top-[22%]' l='right-[20%]'/>
         
 
       <div className={`relative ${greenBounceLoc} z-10 animate-bounce`}>

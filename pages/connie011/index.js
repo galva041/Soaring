@@ -19,7 +19,7 @@ export default function Connie011() {
 
       <StatusBar fraction='3/9' finish="0"/>
 
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col w-full sm:w-[490px]'>
         <p>
           Can you help Kono rebuild his confidence so that he can fix his rocket and go home?
         </p>
@@ -38,12 +38,12 @@ export default function Connie011() {
       loop
       muted
       playsInline
-      className="w-[65%] sm:w-[45%] md:w-[35%] lg:w-[30%] xl:w-[25%] h-auto">
+      className="w-[65%] sm:w-[45%] md:w-[35%] lg:w-[30%] xl:w-[22%] h-auto">
         <source src={c00} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className='flex flex-col w-full justify-center items-center'>
+      <div className='flex flex-col w-full sm:w-[490px] justify-center items-center'>
         <button className='btn-blue mb-3' onClick={handleClick}>Yes, I'll help!</button>
         <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
       </div>

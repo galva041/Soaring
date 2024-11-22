@@ -35,7 +35,7 @@ export default function Connie02() {
     <main>
       <StatusBar fraction='5/9' finish="0"/>
 
-      <p>
+      <p className='w-full sm:w-[490px]'>
         Can you help Kono finish this sentence?
       </p>
 
@@ -43,7 +43,7 @@ export default function Connie02() {
         <Image
           src={c02}
           alt="Connie02"
-          className="object-contain"
+          className="object-contain w-full"
         />
       </div>
 
@@ -51,7 +51,7 @@ export default function Connie02() {
         "I am <span className='font-sans'>_________</span>."
       </p>
 
-      <div className='grid grid-cols-2 w-full gap-x-10 gap-y-5 my-5'>
+      <div className='grid grid-cols-2 w-full sm:w-[490px] gap-x-5 gap-y-5 my-5'>
         <button className='btn-gray' onClick={() => checkWord('running')}>running</button>
         <button className='btn-gray' onClick={() => checkWord('smart')}>smart</button>
         <button className='btn-gray' onClick={() => checkWord('a leader')}>a leader</button>

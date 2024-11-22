@@ -20,7 +20,7 @@ export default function RocketBroke() {
     <main>
       <StatusBar fraction='2/9' finish="0"/>
 
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col w-full sm:w-[490px]'>
         <p className='text-[22px] sm:text-[24px] mb-4'>
           On his way home, the rocket broke!
         </p>
@@ -46,7 +46,7 @@ export default function RocketBroke() {
         Your browser does not support the video tag.
       </video>
 
-      <div className='flex flex-col w-full justify-center items-center'>
+      <div className='flex flex-col w-full sm:w-[490px] justify-center items-center'>
         <button className='btn-blue mt-7 my-3' onClick={handleClick}>Oh no!</button>
         <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
       </div>

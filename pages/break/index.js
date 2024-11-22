@@ -63,7 +63,7 @@ export default function Break() {
             totalCoins = 15;
             message = "Kono’s rocket is now ready to fly and he’s on his way home!";
             KonoImg = break6Kono;
-            nextPage = "survey";
+            nextPage = "survey?lesson=1";
             btnText = "Submit Feedback";
             break;
     }
@@ -103,12 +103,12 @@ export default function Break() {
                 </div>}
 
                 {breakNum == 4 && 
-                <p className={`text-left self-start w-[95%] mb-[18%]`}>
+                <p className={`text-left w-full sm:w-[490px] mb-[18%]`}>
                     {message}
                 </p>}
 
                 {breakNum < 6 &&
-                <div className={`h-min ${breakNum >= 5? 'w-3/5': 'w-4/5'} sm:w-1/3 md:w-1/3 lg:w-1/4`}>
+                <div className={`h-min ${breakNum >= 5? 'w-3/5': 'w-2/3'} sm:w-1/3 md:w-1/3 lg:w-1/4`}>
                     <Image
                     src={KonoImg}
                     alt="breakImg"
@@ -128,12 +128,12 @@ export default function Break() {
                 </video>}
 
                 {breakNum != 4 && 
-                <p className={`text-center w-full`}>
+                <p className={`text-center w-full sm:w-[490px]`}>
                     {message}
                 </p>}
             </div>
 
-            <button className="btn-blue" onClick={handleClick}>
+            <button className="btn-blue w-full sm:w-[490px]" onClick={handleClick}>
                 {btnText} <HiOutlineArrowNarrowRight className={`${breakNum == 4? 'hidden' : 'block'} ml-2`}/>
             </button>
 

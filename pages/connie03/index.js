@@ -12,7 +12,7 @@ export default function Connie03() {
     >   
         <StatusBar fraction='6/9'/>
 
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full sm:w-[490px]'>
             <p>
                 What is another positive sentence Kono can say about himself?
             </p>

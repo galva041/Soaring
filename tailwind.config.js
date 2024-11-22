@@ -27,7 +27,15 @@ module.exports = {
         'focus': {
           '0%': { transform: 'scale(0.9)' },
           '100%': { transform: 'scale(1)' },
-        }
+        },
+        'fill-circle': {
+          '0%': {
+            background: 'conic-gradient(#3b82f6 0%, #3b82f6 0%, #d1d5db 0%, #d1d5db 100%)',
+          },
+          '100%': {
+            background: 'conic-gradient(#3b82f6 0%, #3b82f6 100%, #d1d5db 100%, #d1d5db 100%)',
+          },
+        },
       },
       colors: {
         'green': '#00C49A',
@@ -52,6 +60,7 @@ module.exports = {
         'grow-shrink': 'grow-shrink 5s infinite',
         'load': 'load 1.5s',
         'fly-in': 'fly-in 1.1s',
+        'fill-circle': 'fill-circle 3s linear forwards',
       }
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

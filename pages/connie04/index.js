@@ -39,7 +39,7 @@ export default function Connie04() {
     <main>
       <StatusBar fraction='7/9' finish="0"/>
 
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col w-full sm:w-[490px]'>
         <p className='text-[21px]'>
           Thank you for helping Kono! Now, it’s your turn! Pick as many positive sentences you would say about you
         </p>
@@ -54,7 +54,7 @@ export default function Connie04() {
       </div>
 
       {/* <form className="flex flex-col items-start md:items-center w-[99%]"> */}
-      <div className='my-1.5 flex flex-col items-start w-[95%]'>
+      <div className='my-1.5 flex flex-col items-start w-full sm:w-[490px]'>
         <HeartOption id="op1" sentence={"I can make a difference."}
         onChange={(checked) => handleChange(checked, 0)}/>
         <HeartOption id="op2" sentence={"I have great ideas."}
@@ -72,7 +72,7 @@ export default function Connie04() {
        
     {/* </form> */}
 
-     <button className={`btn-blue col-span-2`}
+     <button className={`btn-blue col-span-2 w-full sm:w-[490px]`}
       onClick={handleClick}
       disabled={!isAtLeastOneChecked}
       >

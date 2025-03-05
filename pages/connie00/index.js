@@ -43,7 +43,7 @@ export default function Connie00() {
         def="a statement that is true"
         /> } */}
 
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col  w-full sm:w-[490px]'>
         <p className='text-[22px] sm:text-[24px] mb-4'
         // onClick={()=>setDef(false)}
         >
@@ -72,12 +72,12 @@ export default function Connie00() {
       loop
       muted
       playsInline
-      className="w-[70%] sm:w-[40%] md:w-[30%] lg:w-[25%] xl:w-[22%] h-auto">
+      className="w-[60%] sm:w-[40%] md:w-[30%] lg:w-[25%] xl:w-[20%] h-auto">
         <source src={c0} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className='flex flex-col w-full justify-center items-center'>
+      <div className='flex flex-col w-full sm:w-[490px] justify-center items-center'>
         <button className='btn-blue mt-7 my-3' onClick={handleClick}>Hi Kono!</button>
         <button className='btn-transparent' onClick={() => router.push('/')}>Maybe Later</button>
       </div>

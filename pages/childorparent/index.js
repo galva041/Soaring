@@ -18,7 +18,7 @@ export default function ChildOrParent() {
       className="bg-gray-blue h-screen space-y-9 pt-4"
     >
         <div className='z-10 flex w-screen pl-6 pr-10'>
-            <button className="btn-nav" onClick={() => router.back()}>
+            <button className="btn-nav" onClick={() => router.push('/')}>
             <IoChevronBackOutline size={22} color="#0978D5"/>
             </button>
 
@@ -27,7 +27,7 @@ export default function ChildOrParent() {
             </button>
         </div>
 
-        <p>
+        <p className='w-full sm:w-[490px]'> 
             We’re so happy to have you here! Before we begin, can you tell us about yourself?
         </p>
 
@@ -41,12 +41,12 @@ export default function ChildOrParent() {
 
 
         {/* <div className=''> */}
-            <button className='btn-blue space-x-3 flex items-center' onClick={() => router.push('/map?cloud=0')}>
+            <button className='btn-blue space-x-3 flex items-center w-full sm:w-[490px]' onClick={() => router.push('/map?cloud=0')}>
                 <RiOpenArmLine size={24} color='#FFFFFF'/>
                 <h1 className='text-[16px] font-semibold text-white'>I'm a child</h1>
             </button>
 
-            <button className='btn-blue space-x-2.5 flex items-center' onClick={() => router.push('/parent?firstLoad=Y')}>
+            <button className='btn-blue space-x-2.5 flex items-center w-full sm:w-[490px]' onClick={() => router.push('/parent?firstLoad=Y')}>
                 <RiParentLine size={24} color='#FFFFFF'/>
                 <h1 className='text-[16px] font-semibold text-white'>I'm a parent</h1>
             </button>

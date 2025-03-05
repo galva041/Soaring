@@ -50,7 +50,7 @@ export default function Connie05() {
       <StatusBar fraction='8/9' finish="0"/>
 
       {/* <div className='flex flex-col w-full'> */}
-      <p>
+      <p className='w-full sm:w-[490px]'>
         You’re almost there! Finally, complete this sentence with a positive word about you.
       </p>
       {/* </div> */}
@@ -76,25 +76,25 @@ export default function Connie05() {
         type="text"
         placeholder="An example would be using the word “brave” so that it reads “I am brave.”
         Now, try with a another word! Tap here to type."
-        className="w-[95%] h-[85px]"
+        className="w-full sm:w-[490px] h-[85px]"
         value={textareaValue}
         onChange={handleInputChange}
         required>
       </textarea>
 
       {errorMessage && 
-        <p className='text-[#FC6C69] text-[20px] absolute z-3 bottom-[11%]'>
+        <p className='text-[#FC6C69] text-[20px] absolute z-3 bottom-[11%] sm:bottom-[23%]'>
           {errorMessage}
         </p>}
 
-      <button className='btn-blue w-[88%] absolute z-2 bottom-[2%]' 
+      <button className='btn-blue w-[88%] sm:w-[490px] absolute z-2 bottom-[2%] sm:bottom-[5%]' 
       onClick={handleClick}
       disabled={!answered}>
         Check
       </button>
       {/* <TxtAnsPopUp currPage="Connie02"/> */}
 
-      {ans? <CorrectFillInBlank/> 
+      {ans? <CorrectFillInBlank lesson="1"/> 
       : null}
     </main>
   )

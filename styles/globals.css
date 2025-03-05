@@ -41,13 +41,13 @@
     @apply text-black text-[26px] font-semibold
   }
 
-  /* input {
+  input {
     @apply text-black text-[14px] border-2 border-outline-gray w-full px-1.5 py-2 rounded-md mb-2
-  } */
+  }
 
-  /* input:placeholder-shown {
+  input:placeholder-shown {
     @apply italic text-txt-gray
-  } */
+  }
   
   textarea {
     @apply text-black text-[13px] border-2 border-outline-gray w-full h-20 p-3 rounded-md
@@ -129,6 +129,14 @@
 
   .btn-not-pick {
     @apply font-medium text-[14px] text-blue bg-transparent rounded-full min-w-fit border-2 border-blue px-5 py-1.5
+  }
+
+  .btn-pet-option {
+    @apply flex flex-col justify-center items-center rounded-lg border-2 border-outline-gray text-center
+  }
+
+  .btn-pet-option-pick {
+    @apply flex flex-col justify-center items-center rounded-lg border-4 border-blue text-center
   }
 }
 

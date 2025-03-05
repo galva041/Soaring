@@ -53,11 +53,11 @@ export default function Home() {
       
     <p className='font-poppins'>Welcome to</p>
     <p className='text-[54px]'>Soaring</p>
-    <p className='text-center mb-[5%] lg:mb-10 md:w-2/3'>
+    <p className='text-center mb-[5%] lg:mb-10 w-full sm:w-[490px]'>
       Hi there, nice to meet you! We can’t wait for you to test our fun, new app! 😄 
     </p>
 
-    <button className='btn-blue mt-10 mb-[14%] lg:mb-10' onClick={handleClick}>
+    <button className='btn-blue mt-10 mb-[14%] lg:mb-10 w-full sm:w-[490px]' onClick={handleClick}>
       Get Started 
       <HiOutlineArrowNarrowRight className='ml-2'/>
     </button>

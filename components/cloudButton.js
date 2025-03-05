@@ -22,7 +22,7 @@ const CloudButton = ({lesson, route = '/map', complete = false, locked = true, t
       <div className={`relative flex justify-center items-center w-fit ${t} ${l}`} >
         <div className='z-9 h-min w-[250px]'>
           <Image
-          src={lesson == "Our Positivity"? OurPositivity : lesson == "My Hero"? MyHero : lesson == "My AmazongMind"? OurAmazingMind: Positivity}
+          src={lesson == "Our Positivity"? OurPositivity : lesson == "My Hero"? MyHero : lesson == "Perfect Nurturer"? OurAmazingMind: Positivity}
           alt="cloud"
           className="object-contain"
           />

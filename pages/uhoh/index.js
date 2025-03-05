@@ -40,12 +40,12 @@ export default function UhOh() {
             </div>
         </div>
 
-        <div className='flex flex-col justify-between items-center mb-20'>
-            <div className='mt-14 h-min w-3/4 sm:w-1/2 md:w-1/3 xl:w-1/4'>
+        <div className='flex flex-col justify-between items-center mb-20 w-full sm:w-[490px]'>
+            <div className='mt-14 h-min w-3/4'>
                 <Image
                 src={construction}
                 alt="construction"
-                className="object-contain"
+                className="object-contain w-full"
                 />
             </div>
 
@@ -60,7 +60,7 @@ export default function UhOh() {
             </div>
         </div>
 
-        <div className='flex flex-col w-full justify-between items-center'>
+        <div className='flex flex-col w-full sm:w-[490px] justify-between items-center'>
             <button className='btn-blue' onClick={handleClick}>Return to Home</button>
         </div>
 
